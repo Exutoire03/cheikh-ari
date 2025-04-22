@@ -21,7 +21,8 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-black/90 backdrop-blur-sm' : 'bg-transparent'}}`}>
+    <nav className="fixed top-0 w-full z-50 transition-all duration-300">
+      <div className={`w-full transition-all duration-300 ${isScrolled ? 'bg-black/80 backdrop-blur-sm' : ''}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           <div className="flex-shrink-0">
@@ -104,6 +105,7 @@ const Navbar = () => {
             Contact
           </Link>
         </div>
+      </div>
       </div>
     </nav>
   );
