@@ -23,14 +23,6 @@ export default function ContactPage() {
     console.log('Form submitted:', formData);
   };
 
-  const handleFocus = (fieldName: string) => {
-    setActiveField(fieldName);
-  };
-
-  const handleBlur = () => {
-    setActiveField(null);
-  };
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
