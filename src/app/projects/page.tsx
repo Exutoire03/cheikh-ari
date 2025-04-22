@@ -5,7 +5,7 @@ const projects = [
     id: 1,
     title: 'E-commerce Modern',
     description: 'Une plateforme e-commerce complète avec panier, paiement et gestion des commandes. Développée avec Next.js et Stripe.',
-    image: '/projects/ecommerce.jpg',
+    image: 'https://placehold.co/600x400/222222/cccccc?text=E-commerce+Modern',
     tags: ['Next.js', 'Stripe', 'Tailwind CSS'],
     link: '#'
   },
@@ -13,7 +13,7 @@ const projects = [
     id: 2,
     title: 'Application de Gestion',
     description: 'Système de gestion d\'entreprise avec tableaux de bord, rapports et analyses en temps réel.',
-    image: '/projects/dashboard.jpg',
+    image: 'https://placehold.co/600x400/222222/cccccc?text=Application+de+Gestion',
     tags: ['React', 'Node.js', 'MongoDB'],
     link: '#'
   },
@@ -21,7 +21,7 @@ const projects = [
     id: 3,
     title: 'Réseau Social',
     description: 'Plateforme sociale avec messagerie en temps réel, partage de contenu et gestion de profil.',
-    image: '/projects/social.jpg',
+    image: 'https://placehold.co/600x400/222222/cccccc?text=Réseau+Social',
     tags: ['React', 'Socket.io', 'Express'],
     link: '#'
   },
@@ -29,7 +29,7 @@ const projects = [
     id: 4,
     title: 'Application Mobile',
     description: 'Application mobile cross-platform pour la gestion de tâches et la collaboration en équipe.',
-    image: '/projects/mobile.jpg',
+    image: 'https://placehold.co/600x400/222222/cccccc?text=Application+Mobile',
     tags: ['React Native', 'Firebase', 'Redux'],
     link: '#'
   },
@@ -37,7 +37,7 @@ const projects = [
     id: 5,
     title: 'Blog Personnel',
     description: 'Blog moderne avec système de gestion de contenu, commentaires et newsletter.',
-    image: '/projects/blog.jpg',
+    image: 'https://placehold.co/600x400/222222/cccccc?text=Blog+Personnel',
     tags: ['Next.js', 'MDX', 'Prisma'],
     link: '#'
   },
@@ -45,7 +45,7 @@ const projects = [
     id: 6,
     title: 'Portfolio Créatif',
     description: 'Portfolio interactif avec animations et effets visuels modernes.',
-    image: '/projects/portfolio.jpg',
+    image: 'https://placehold.co/600x400/222222/cccccc?text=Portfolio+Créatif',
     tags: ['React', 'Three.js', 'GSAP'],
     link: '#'
   }
