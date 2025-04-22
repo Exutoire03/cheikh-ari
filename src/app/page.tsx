@@ -48,7 +48,7 @@ export default function Home() {
                 Voir mes projets
               </a>
               <a
-                href="#contact"
+                href="/contact"
                 className="px-10 py-4 border-2 border-purple-600 hover:border-purple-500 rounded-full
                          transition-all duration-300 text-white font-semibold text-lg
                          hover:bg-purple-600/10 hover:transform hover:scale-105"
