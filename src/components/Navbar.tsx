@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [, setIsScrolled] = useState(false);
 
   // Gestion du scroll pour l'opacité de la navbar
   useEffect(() => {
