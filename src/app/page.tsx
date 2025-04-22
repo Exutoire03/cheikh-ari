@@ -68,7 +68,7 @@ export default function Home() {
               Mes Compétences
             </h2>
             <p className="text-xl text-gray-300 leading-relaxed">
-              Les technologies que j'utilise pour donner vie à vos projets
+              Les technologies que j&apos;utilise pour donner vie à vos projets
             </p>
           </div>
           
