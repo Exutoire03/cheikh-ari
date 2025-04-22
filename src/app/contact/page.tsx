@@ -11,7 +11,7 @@ export default function ContactPage() {
   });
 
   const [isVisible, setIsVisible] = useState(false);
-  const [activeField, setActiveField] = useState<string | null>(null);
+  const [activeField] = useState<string | null>(null);
 
   useEffect(() => {
     setIsVisible(true);
