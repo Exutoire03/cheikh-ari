@@ -1,10 +1,7 @@
 'use client';
 import Link from 'next/link';
-import { useState } from 'react';
 
 const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   return (
     <nav className="fixed top-0 w-full bg-black/90 backdrop-blur-sm z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
