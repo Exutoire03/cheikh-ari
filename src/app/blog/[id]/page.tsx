@@ -22,7 +22,6 @@ interface BlogPost {
 
 const BlogPostPage = () => {
   const params = useParams();
-  const postId = params.id;
 
   // Exemple d'article (à remplacer par vos vrais articles)
   const post: BlogPost = {

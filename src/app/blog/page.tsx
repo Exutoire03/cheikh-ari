@@ -54,7 +54,7 @@ const BlogPage = () => {
               Blog
             </h1>
             <p className="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-              Suivez l'évolution de mon projet et découvrez mes réflexions sur le développement web.
+              Suivez l&apos;évolution de mon projet et découvrez mes réflexions sur le développement web.
             </p>
           </div>
         </div>
@@ -97,7 +97,7 @@ const BlogPage = () => {
                       {post.description}
                     </p>
                     <div className="mt-4 flex items-center text-purple-400 font-medium">
-                      Lire l'article
+                      Lire l&apos;article
                       <svg
                         className="ml-2 w-4 h-4"
                         fill="none"
