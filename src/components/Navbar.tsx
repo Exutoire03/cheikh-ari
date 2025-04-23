@@ -3,6 +3,14 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 
 const Navbar = () => {
+  const navigation = [
+    { name: 'Accueil', href: '/' },
+    { name: 'À propos', href: '/about' },
+    { name: 'Projets', href: '/projects' },
+    { name: 'Mon Exutoire', href: '/exutoire' },
+    { name: 'Contact', href: '/contact' },
+  ];
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [, setIsScrolled] = useState(false);
 
@@ -33,18 +41,15 @@ const Navbar = () => {
           {/* Menu Desktop */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
-              <Link href="/" className="text-gray-300 hover:text-white px-3 py-2 text-sm lg:text-base font-medium transition-colors">
-                Accueil
-              </Link>
-              <Link href="/projects" className="text-gray-300 hover:text-white px-3 py-2 text-sm lg:text-base font-medium transition-colors">
-                Projets
-              </Link>
-              <Link href="/about" className="text-gray-300 hover:text-white px-3 py-2 text-sm lg:text-base font-medium transition-colors">
-                À propos
-              </Link>
-              <Link href="/contact" className="text-gray-300 hover:text-white px-3 py-2 text-sm lg:text-base font-medium transition-colors">
-                Contact
-              </Link>
+              {navigation.map((item) => (
+                <Link 
+                  key={item.name}
+                  href={item.href} 
+                  className="text-gray-300 hover:text-white px-3 py-2 text-sm lg:text-base font-medium transition-colors"
+                >
+                  {item.name}
+                </Link>
+              ))}
             </div>
           </div>
 
@@ -75,34 +80,16 @@ const Navbar = () => {
         className={`md:hidden transition-all duration-300 ease-in-out transform ${isMenuOpen ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0'}`}
       >
         <div className="px-2 pt-2 pb-3 space-y-1 bg-black/95 backdrop-blur-sm shadow-lg">
-          <Link
-            href="/"
-            className="block px-3 py-4 text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800/50 rounded-md transition-colors"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Accueil
-          </Link>
-          <Link
-            href="/projects"
-            className="block px-3 py-4 text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800/50 rounded-md transition-colors"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Projets
-          </Link>
-          <Link
-            href="/about"
-            className="block px-3 py-4 text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800/50 rounded-md transition-colors"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            À propos
-          </Link>
-          <Link
-            href="/contact"
-            className="block px-3 py-4 text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800/50 rounded-md transition-colors"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Contact
-          </Link>
+          {navigation.map((item) => (
+            <Link
+              key={item.name}
+              href={item.href}
+              className="block px-3 py-4 text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800/50 rounded-md transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {item.name}
+            </Link>
+          ))}
         </div>
       </div>
     </nav>
