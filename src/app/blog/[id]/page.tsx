@@ -21,7 +21,6 @@ interface BlogPost {
 }
 
 const BlogPostPage = () => {
-  const params = useParams();
 
   // Exemple d'article (à remplacer par vos vrais articles)
   const post: BlogPost = {
@@ -36,7 +35,7 @@ const BlogPostPage = () => {
       <h2>Les défis rencontrés</h2>
       <p>Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue. Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue.</p>
       
-      <h2>Les solutions</h2>
+      <h2>Les solutions</h2> <br />
       <p>Praesent egestas leo in pede. Praesent blandit odio eu enim. Pellentesque sed dui ut augue blandit sodales. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam nibh.</p>
     `,
     date: '23 Avril 2025',
