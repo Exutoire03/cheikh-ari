@@ -68,6 +68,16 @@ export default function AboutPage() {
       name: 'Sport',
       icon: '🏃',
       description: 'Course à pied et escalade'
+    },
+    {
+      name: 'Lecture',
+      icon: '📚',
+      description: 'Passioné par la lecture de livres'
+    },
+    {
+      name: 'Ecriture',
+      icon: '✍️',
+      description: 'Ecriture de romans et de poèmes'
     }
   ];
 
@@ -118,7 +128,7 @@ export default function AboutPage() {
               Développeur web junior avec bientot 02 années d&apos;expérience dans la création d&apos;applications web modernes et performantes. Passionné par les nouvelles technologies et l&apos;innovation, je m&apos;efforce de créer des solutions élégantes qui répondent aux besoins des utilisateurs.
             </p>
             <p className="text-lg text-gray-300 leading-relaxed">
-              Mon approche combine créativité et rigueur technique pour développer des applications web qui se démarquent tant par leur design que par leur performance.
+              Mon approche combine créativité, expérience utilisateur et élégance pour développer des applications web qui se démarquent tant par leur design que par leur performance.
             </p>
             <div className="flex flex-wrap gap-4 pt-4">
               <a
