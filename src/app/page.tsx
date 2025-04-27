@@ -72,10 +72,10 @@ export default function Home() {
             </p>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-12 max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-x-8 gap-y-12 max-w-7xl mx-auto">
             {[
               'React', 'Next.js', 'TypeScript', 'Node.js',
-              'Tailwind CSS', 'MongoDB', 'GraphQL', 'AWS'
+              'Tailwind CSS'
             ].map((skill) => (
               <div 
                 key={skill} 

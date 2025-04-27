@@ -3,25 +3,25 @@ import Image from 'next/image';
 export default function AboutPage() {
   const experiences = [
     {
-      period: '2021 - Présent',
-      title: 'Développeur Full-Stack Senior',
-      company: 'Entreprise Tech',
-      description: 'Développement d\'applications web complexes, direction technique de projets, et mise en place de bonnes pratiques de développement.',
-      technologies: ['React', 'Node.js', 'AWS', 'MongoDB']
+      period: '2024 - Présent',
+      title: 'Développeur Frontend & Backend',
+      company: 'Portfolio',
+      description: 'Création de projets webs.',
+      technologies: ['TypeScript', 'Tailwind CSS', 'Node.js', 'PostgreSQL', 'Docker', 'Vercel', 'Next.js']
     },
     {
-      period: '2019 - 2021',
-      title: 'Développeur Frontend',
-      company: 'Startup Innovante',
+      period: '2024 - 2025',
+      title: 'Développeur Frontend & Backend',
+      company: 'Tama',
       description: 'Création d\'interfaces utilisateur modernes et réactives, optimisation des performances.',
-      technologies: ['Vue.js', 'TypeScript', 'Tailwind CSS']
+      technologies: ['TypeScript', 'Tailwind CSS', 'Node.js', 'PostgreSQL', 'Docker', 'Vercel', 'Next.js']
     },
     {
-      period: '2018 - 2019',
+      period: '2023 - 2024',
       title: 'Développeur Web Junior',
-      company: 'Agence Web',
-      description: 'Développement de sites web et intégration de maquettes pour divers clients.',
-      technologies: ['HTML/CSS', 'JavaScript', 'PHP']
+      company: 'Ecole Internationale de Graphisme',
+      description: 'Apprentissage du développement web',
+      technologies: ['HTML/CSS', 'JavaScript', 'React', 'Next.js', 'TypeScript', 'Tailwind CSS']
     }
   ];
 
@@ -60,11 +60,6 @@ export default function AboutPage() {
       description: 'Passion pour la photographie de rue et les paysages'
     },
     {
-      name: 'Musique',
-      icon: '🎸',
-      description: 'Pratique de la guitare et composition'
-    },
-    {
       name: 'Voyage',
       icon: '✈️',
       description: 'Découverte de nouvelles cultures et endroits'
@@ -79,15 +74,15 @@ export default function AboutPage() {
   const skills = [
     {
       category: 'Frontend',
-      technologies: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Redux']
+      technologies: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS']
     },
     {
       category: 'Backend',
-      technologies: ['Node.js', 'Express', 'MongoDB', 'PostgreSQL', 'GraphQL']
+      technologies: ['Node.js','PostgreSQL']
     },
     {
       category: 'Outils',
-      technologies: ['Git', 'Docker', 'AWS', 'Vercel', 'Figma']
+      technologies: ['Git', 'Docker', 'Vercel']
     }
   ];
 
@@ -117,10 +112,10 @@ export default function AboutPage() {
           </div>
           <div className="space-y-6">
             <h2 className="text-3xl md:text-4xl font-bold text-purple-400">
-              Bonjour, je suis [Votre Nom]
+              Bonjour, je suis Cheikh Ari
             </h2>
             <p className="text-lg text-gray-300 leading-relaxed">
-              Développeur web full-stack avec plus de [X] années d&apos;expérience dans la création d&apos;applications web modernes et performantes. Passionné par les nouvelles technologies et l&apos;innovation, je m&apos;efforce de créer des solutions élégantes qui répondent aux besoins des utilisateurs.
+              Développeur web junior avec bientot 02 années d&apos;expérience dans la création d&apos;applications web modernes et performantes. Passionné par les nouvelles technologies et l&apos;innovation, je m&apos;efforce de créer des solutions élégantes qui répondent aux besoins des utilisateurs.
             </p>
             <p className="text-lg text-gray-300 leading-relaxed">
               Mon approche combine créativité et rigueur technique pour développer des applications web qui se démarquent tant par leur design que par leur performance.
@@ -171,43 +166,38 @@ export default function AboutPage() {
         </div>
 
         {/* Section Expérience */}
-        <div className="max-w-7xl mx-auto mt-24">
+        <div className="max-w-7xl mx-auto mt-24 flex flex-col justify-center items-center">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">
             Mon Expérience
           </h2>
-          <div className="space-y-8">
+          <div className="space-y-8 w-full flex flex-col items-center">
             {experiences.map((exp, index) => (
-              <div 
+              <div
                 key={index}
-                className="p-8 rounded-xl bg-gradient-to-b from-gray-900/80 to-gray-900/40
-                         backdrop-blur-sm transition-all duration-500
-                         shadow-xl hover:shadow-purple-500/20"
+                className="w-full max-w-2xl p-8 rounded-xl bg-gradient-to-b from-gray-900/80 to-gray-900/40
+                          backdrop-blur-sm transition-all duration-500
+                          shadow-xl hover:shadow-purple-500/20 flex flex-col items-center text-center"
               >
-                <div className="grid md:grid-cols-[200px,1fr] gap-8">
-                  <div>
-                    <span className="text-purple-400 font-semibold">{exp.period}</span>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-white mb-2">{exp.title}</h3>
-                    <p className="text-lg text-purple-400 mb-4">{exp.company}</p>
-                    <p className="text-gray-300 leading-relaxed mb-4">{exp.description}</p>
-                    <div className="flex flex-wrap gap-2">
-                      {exp.technologies.map((tech) => (
-                        <span
-                          key={tech}
-                          className="px-3 py-1 bg-purple-600/10 text-purple-400 rounded-full text-sm
-                                   hover:bg-purple-600/20 transition-colors duration-300"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
+                <span className="text-purple-400 font-semibold mb-4">{exp.period}</span>
+                <h3 className="text-xl font-bold text-white mb-2">{exp.title}</h3>
+                <p className="text-lg text-purple-400 mb-4">{exp.company}</p>
+                <p className="text-gray-300 leading-relaxed mb-6">{exp.description}</p>
+                <div className="flex flex-wrap justify-center gap-2">
+                  {exp.technologies.map((tech) => (
+                    <span
+                      key={tech}
+                      className="px-3 py-1 bg-purple-600/10 text-purple-400 rounded-full text-sm
+                              hover:bg-purple-600/20 transition-colors duration-300"
+                    >
+                      {tech}
+                    </span>
+                  ))}
                 </div>
               </div>
             ))}
           </div>
         </div>
+
 
         {/* Section Soft Skills */}
         <div className="max-w-7xl mx-auto mt-24">
@@ -241,7 +231,7 @@ export default function AboutPage() {
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">
             Mes Passions
           </h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {hobbies.map((hobby, index) => (
               <div
                 key={index}
