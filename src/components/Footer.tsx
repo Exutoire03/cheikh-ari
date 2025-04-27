@@ -12,7 +12,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="relative mt-24 bg-black">
+    <footer className="relative bg-black">
       {/* Arrière-plan décoratif */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_500px_at_50%_200px,rgba(168,85,247,0.1),transparent_80%)]" />
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(to_right,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:32px_32px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_0%,black,transparent)]" />
@@ -55,7 +55,7 @@ const Footer = () => {
             <ul className="space-y-4">
               <li>
                 <a
-                  href="mailto:votre@email.com"
+                  href="cheikh.copywriter@gmail.com"
                   className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group"
                 >
                   <svg
@@ -71,12 +71,12 @@ const Footer = () => {
                       d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                     />
                   </svg>
-                  votre@email.com
+                  Mon adresse mail
                 </a>
               </li>
               <li>
                 <a
-                  href="https://github.com/votre-username"
+                  href="https://github.com/Exutoire03"
                   className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -97,7 +97,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="https://linkedin.com/in/votre-profil"
+                  href="https://linkedin.com/in/cheikh-ari"
                   className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group"
                   target="_blank"
                   rel="noopener noreferrer"
