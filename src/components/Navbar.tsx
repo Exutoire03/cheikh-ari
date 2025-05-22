@@ -13,16 +13,30 @@ const Navbar = () => {
   ];
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [, setIsScrolled] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
-  // Gestion du scroll pour l'opacité de la navbar
+  // Gestion du scroll pour masquer/afficher la navbar
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
+      const currentScrollY = window.scrollY;
+      
+      // Détermine si l'utilisateur défile vers le haut ou vers le bas
+      if (currentScrollY > lastScrollY) {
+        // Défilement vers le bas - masquer la navbar
+        setIsVisible(false);
+      } else {
+        // Défilement vers le haut - afficher la navbar
+        setIsVisible(true);
+      }
+      
+      // Mettre à jour la position de défilement
+      setLastScrollY(currentScrollY);
     };
+    
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [lastScrollY]);
 
   // Fermer le menu mobile lors du changement de route
   useEffect(() => {
@@ -30,7 +44,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="fixed top-0 w-full z-50">
+    <nav className={`fixed top-0 w-full z-50 transition-transform duration-300 ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           <div className="flex-shrink-0">
