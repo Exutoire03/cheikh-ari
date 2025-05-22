@@ -25,7 +25,7 @@ const Footer = () => {
               href="/" 
               className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600"
             >
-              Portfolio
+              Cheikh Ari
             </Link>
             <p className="text-gray-400 max-w-md leading-relaxed">
               Développeur passionné créant des expériences web innovantes et élégantes.
@@ -33,7 +33,7 @@ const Footer = () => {
           </div>
 
           {/* Navigation */}
-          <div className="space-y-6">
+          <div className="space-y-8">
             <h3 className="text-purple-400 font-semibold">Navigation</h3>
             <ul className="space-y-4">
               {navigation.map((item) => (
@@ -50,7 +50,7 @@ const Footer = () => {
           </div>
 
           {/* Contact */}
-          <div className="space-y-6">
+          <div className="space-y-8">
             <h3 className="text-purple-400 font-semibold">Contact</h3>
             <ul className="space-y-4">
               <li>

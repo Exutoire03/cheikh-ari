@@ -34,17 +34,17 @@ export default function ContactPage() {
   const contactInfo = [
     {
       title: 'Email',
-      value: 'votre.email@exemple.com',
+      value: 'aricafe1998@gmail.com',
       icon: '📧'
     },
     {
       title: 'Téléphone',
-      value: '+33 6 XX XX XX XX',
+      value: '+229 01 95 64 85 42',
       icon: '📱'
     },
     {
       title: 'Localisation',
-      value: 'Paris, France',
+      value: 'Cotonou, Bénin',
       icon: '📍'
     }
   ];
@@ -52,12 +52,12 @@ export default function ContactPage() {
   const socialLinks = [
     {
       name: 'GitHub',
-      url: 'https://github.com/votre-username',
+      url: 'https://github.com/Exutoire03',
       icon: '🐙'
     },
     {
       name: 'LinkedIn',
-      url: 'https://linkedin.com/in/votre-profil',
+      url: 'https://linkedin.com/in/cheikh-ari',
       icon: '💼'
     },
     {
