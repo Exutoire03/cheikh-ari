@@ -3,51 +3,43 @@ import Image from 'next/image';
 const projects = [
   {
     id: 1,
-    title: 'E-commerce Modern',
-    description: 'Une plateforme e-commerce complète avec panier, paiement et gestion des commandes. Développée avec Next.js et Stripe.',
-    image: 'https://placehold.co/600x400/222222/cccccc?text=E-commerce+Modern',
-    tags: ['Next.js', 'Stripe', 'Tailwind CSS'],
-    link: '#'
+    title: 'Générateur de bio avec ia',
+    description: 'Une application web de génération de bio inspirantes en temps réel grace à une ia',
+    image: '/projects/a-bio.PNG',
+    tags: ['Next.js', 'Tailwind CSS', 'Gemini'],
+    link: 'https://quotes-eight-red.vercel.app/'
   },
   {
     id: 2,
-    title: 'Application de Gestion',
-    description: 'Système de gestion d\'entreprise avec tableaux de bord, rapports et analyses en temps réel.',
-    image: 'https://placehold.co/600x400/222222/cccccc?text=Application+de+Gestion',
-    tags: ['React', 'Node.js', 'MongoDB'],
-    link: '#'
+    title: 'Application de newsletter',
+    description: 'Système de collecte de mails pour une newsletter',
+    image: '/projects/a-news.PNG',
+    tags: ['React', 'Node.js'],
+    link: 'https://newsletter-ari.vercel.app/'
   },
   {
     id: 3,
-    title: 'Réseau Social',
-    description: 'Plateforme sociale avec messagerie en temps réel, partage de contenu et gestion de profil.',
-    image: 'https://placehold.co/600x400/222222/cccccc?text=Réseau+Social',
-    tags: ['React', 'Socket.io', 'Express'],
-    link: '#'
+    title: 'Plateforme de mis en relation entre étudiants et entreprises',
+    description: 'Plateforme innovante de mise en relation entre étudiants et entreprise',
+    image: '/projects/a-eig.PNG',
+    tags: ['React', 'Tailwind CSS', 'Supabase'],
+    link: 'https://eig-soutenance.vercel.app/'
   },
   {
     id: 4,
-    title: 'Application Mobile',
-    description: 'Application mobile cross-platform pour la gestion de tâches et la collaboration en équipe.',
-    image: 'https://placehold.co/600x400/222222/cccccc?text=Application+Mobile',
-    tags: ['React Native', 'Firebase', 'Redux'],
-    link: '#'
+    title: 'Générateur de mot de passe',
+    description: 'Application de génération de mot de passe aléatoire',
+    image: '/projects/a-pw.PNG',
+    tags: ['Nextjs', 'Tailwind CSS'],
+    link: 'https://random-password-silk.vercel.app/'
   },
   {
     id: 5,
-    title: 'Blog Personnel',
-    description: 'Blog moderne avec système de gestion de contenu, commentaires et newsletter.',
-    image: 'https://placehold.co/600x400/222222/cccccc?text=Blog+Personnel',
-    tags: ['Next.js', 'MDX', 'Prisma'],
-    link: '#'
-  },
-  {
-    id: 6,
-    title: 'Portfolio Créatif',
-    description: 'Portfolio interactif avec animations et effets visuels modernes.',
-    image: 'https://placehold.co/600x400/222222/cccccc?text=Portfolio+Créatif',
-    tags: ['React', 'Three.js', 'GSAP'],
-    link: '#'
+    title: 'Générateur de citations inspirantes',
+    description: 'Générateur de ciations inspirantes',
+    image: '/projects/a-quotes.PNG',
+    tags: ['Next.js', 'Tailwind CSS'],
+    link: 'http://quote-spark-ignite-now.lovable.app/'
   }
 ];
 

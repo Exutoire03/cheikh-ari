@@ -5,26 +5,29 @@ export default function Home() {
   const projects = [
     {
       id: 1,
-      title: 'E-commerce Modern',
-      description: 'Une plateforme e-commerce complète avec panier, paiement et gestion des commandes. Développée avec Next.js et Stripe.',
-      image: '/projects/ecommerce.jpg',
-      tags: ['Next.js', 'Stripe', 'Tailwind CSS']
+      title: 'Générateur de bio avec ia',
+      description: 'Une application web de génération de bio inspirantes en temps réel grace à une ia',
+      image: '/projects/a-bio.PNG',
+      tags: ['Next.js', 'Tailwind CSS', 'Gemini'],
+      link: 'https://quotes-eight-red.vercel.app/'
     },
     {
       id: 2,
-      title: 'Application de Gestion',
-      description: 'Système de gestion d’entreprise avec tableaux de bord, rapports et analyses en temps réel.',
-      image: '/projects/dashboard.jpg',
-      tags: ['React', 'Node.js', 'MongoDB']
+      title: 'Application de newsletter',
+      description: 'Système de collecte de mails pour une newsletter',
+      image: '/projects/a-news.PNG',
+      tags: ['React', 'Node.js'],
+      link: 'https://newsletter-ari.vercel.app/'
     },
     {
       id: 3,
-      title: 'Réseau Social',
-      description: 'Plateforme sociale avec messagerie en temps réel, partage de contenu et gestion de profil.',
-      image: '/projects/social.jpg',
-      tags: ['React', 'Socket.io', 'Express']
-    }
-  ];
+      title: 'Plateforme de mis en relation entre étudiants et entreprises',
+      description: 'Plateforme innovante de mise en relation entre étudiants et entreprise',
+      image: '/projects/a-eig.PNG',
+      tags: ['React', 'Tailwind CSS', 'Supabase'],
+      link: 'https://eig-soutenance.vercel.app/'
+    },
+  ]
 
   return (
     <div className="min-h-screen bg-black text-white">
@@ -136,6 +139,19 @@ export default function Home() {
                       </span>
                     ))}
                   </div>
+                  <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center px-6 py-3 bg-purple-600 hover:bg-purple-700 rounded-full
+                           transition-all duration-300 text-white font-semibold text-sm group-hover:shadow-lg
+                           group-hover:shadow-purple-500/30"
+                >
+                  Voir le projet
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </a>
                 </div>
               </div>
             ))}
