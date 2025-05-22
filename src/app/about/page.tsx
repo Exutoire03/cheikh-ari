@@ -132,7 +132,7 @@ export default function AboutPage() {
             </p>
             <div className="flex flex-wrap gap-4 pt-4">
               <a
-                href="#contact"
+                href=" https://wa.me/message/4MR4JID7X4ZEG1"
                 className="inline-flex items-center px-6 py-3 bg-purple-600 hover:bg-purple-700 rounded-full
                          transition-all duration-300 text-white font-semibold hover:transform
                          hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25"
