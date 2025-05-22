@@ -11,7 +11,7 @@ export default function AboutPage() {
     },
     {
       period: '2024 - 2025',
-      title: 'Développeur Frontend & Backend',
+      title: 'Développeur Fullstack',
       company: 'Tama',
       description: 'Création d\'interfaces utilisateur modernes et réactives, optimisation des performances.',
       technologies: ['TypeScript', 'Tailwind CSS', 'Node.js', 'PostgreSQL', 'Docker', 'Vercel', 'Next.js']
@@ -114,7 +114,7 @@ export default function AboutPage() {
           <div className="relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-tr from-purple-600/20 to-transparent z-10"></div>
             <Image
-              src="https://placehold.co/800x1000/222222/cccccc?text=Votre+Photo"
+              src="/projects/ari.jpg"
               alt="Photo de profil"
               fill
               className="object-cover"
