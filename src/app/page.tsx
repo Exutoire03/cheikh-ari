@@ -12,13 +12,13 @@ export default function Home() {
       link: 'https://quotes-eight-red.vercel.app/'
     },
     {
-      id: 2,
-      title: 'Application de newsletter',
-      description: 'Système de collecte de mails pour une newsletter',
-      image: '/projects/a-news.PNG',
-      tags: ['React', 'Node.js'],
-      link: 'https://newsletter-ari.vercel.app/'
-    },
+    id: 3,
+    title: 'Site vitrine du restaurant Corazon',
+    description: 'Site vitrine du restaurant Corazon',
+    image: '/projects/corazon.PNG',
+    tags: ['React', 'Node.js'],
+    link: 'https://corazon-flax.vercel.app/'
+  },
     {
       id: 3,
       title: 'Plateforme de mis en relation entre étudiants et entreprises',
