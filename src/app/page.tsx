@@ -129,7 +129,7 @@ export default function HomePage() {
                 Mes Compétences Clés
               </h2>
               <p className="mt-4 text-lg text-slate-400">
-                Les technologies que j'utilise pour donner vie à vos projets.
+                Les technologies que j&apos;utilise pour donner vie à vos projets.
               </p>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-4xl mx-auto">
@@ -155,7 +155,7 @@ export default function HomePage() {
                   Prêt à concrétiser votre projet ?
               </h2>
               <p className="mt-4 mb-8 text-lg text-slate-400">
-                  Je suis toujours ouvert à de nouvelles opportunités. N'hésitez pas à me contacter pour que nous puissions discuter de votre idée.
+                  Je suis toujours ouvert à de nouvelles opportunités. N&apos;hésitez pas à me contacter pour que nous puissions discuter de votre idée.
               </p>
               <Link
                   href="/contact"
