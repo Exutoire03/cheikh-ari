@@ -27,7 +27,7 @@ const featuredProjects = [
     description: 'Plateforme innovante de mise en relation entre étudiants et entreprises pour des stages et des projets.',
     image: '/projects/a-eig.PNG',
     tags: ['Next.js', 'Tailwind CSS', 'Supabase'],
-    link: '#', 
+    link: 'https://eig-soutenance.vercel.app/', 
   },
 ];
 
