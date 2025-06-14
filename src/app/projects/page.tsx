@@ -69,7 +69,14 @@ export default function ProjectsPage() {
               className="group relative flex flex-col rounded-2xl overflow-hidden bg-gray-950 border border-gray-800
                          transition-all duration-300 ease-in-out hover:border-sky-500/50 hover:-translate-y-1.5"
             >
-              <div className="relative h-56 w-full overflow-hidden">
+              {/* MODIFICATION ICI: Envelopper l'image dans une balise <a> */}
+              <a 
+                href={project.link} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                aria-label={`Voir le projet ${project.title}`}
+                className="block relative h-56 w-full overflow-hidden"
+              >
                 <Image
                   src={project.image}
                   alt={project.title}
@@ -77,7 +84,7 @@ export default function ProjectsPage() {
                   className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-              </div>
+              </a>
               
               <div className="flex flex-col flex-grow p-6">
                 <h3 className="text-xl font-bold mb-2 text-slate-100">

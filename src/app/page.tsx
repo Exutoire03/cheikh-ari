@@ -44,12 +44,13 @@ export default function HomePage() {
   return (
     <>
       <div 
-        className="absolute inset-0 -z-10 h-full w-full bg-black" // Assure un fond noir même avec le gradient
+        className="absolute inset-0 -z-10 h-full w-full bg-black"
         style={{backgroundImage: 'radial-gradient(ellipse 80% 80% at 50% -20%, rgba(14, 165, 233, 0.15), rgba(255, 255, 255, 0))'}}
       />
 
-      {/* MODIFICATION ICI: Ajout de la classe 'relative' */}
-      <div className="relative min-h-screen bg-black text-slate-300 font-sans"> 
+      {/* =========== LA CORRECTION EST ICI =========== */}
+      {/* bg-black a été remplacé par bg-transparent pour que ce conteneur n'ait pas son propre fond */}
+      <div className="min-h-screen bg-transparent text-slate-300 font-sans">
         
         {/* --- SECTION 1: HÉROS --- */}
         <section className="relative flex flex-col items-center justify-center min-h-screen text-center px-6 pt-24 pb-16">
@@ -84,7 +85,6 @@ export default function HomePage() {
         </section>
 
         {/* --- SECTION 2: PROJETS EN VITRINE --- */}
-        {/* Aucune classe de fond spécifique ici, héritera du bg-black parent */}
         <section id="featured-projects" className="py-24 sm:py-32 px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
@@ -122,7 +122,6 @@ export default function HomePage() {
         </section>
 
         {/* --- SECTION 3: COMPÉTENCES TECHNIQUES --- */}
-        {/* Aucune classe de fond spécifique ici, héritera du bg-black parent */}
         <section className="py-24 sm:py-32 px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
@@ -135,7 +134,6 @@ export default function HomePage() {
             </div>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-4xl mx-auto">
               {skills.map((skill) => (
-                // MODIFICATION : bg-gray-950/50 est devenu bg-gray-950 pour un fond solide
                 <div key={skill.name} className="group p-6 rounded-2xl bg-gray-950 border border-gray-800 text-center
                                                hover:border-sky-500/50 hover:-translate-y-1 transition-all duration-300">
                   <div className="text-sky-400 transition-colors duration-300 mb-3 group-hover:text-sky-300">
@@ -151,7 +149,6 @@ export default function HomePage() {
         </section>
 
         {/* --- SECTION 4: APPEL À L'ACTION FINAL --- */}
-        {/* Aucune classe de fond spécifique ici, héritera du bg-black parent */}
         <section className="py-24 sm:py-32 px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-3xl md:text-4xl font-bold text-slate-100 tracking-tighter">
