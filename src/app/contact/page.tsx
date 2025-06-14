@@ -34,7 +34,7 @@ export default function ContactPage() {
   const contactInfo = [
     {
       title: 'Email',
-      value: 'aricafe1998@gmail.com',
+      value: 'cheikhdev.web@gmail.com',
       icon: '📧'
     },
     {
@@ -53,17 +53,14 @@ export default function ContactPage() {
     {
       name: 'GitHub',
       url: 'https://github.com/Exutoire03',
-      icon: '🐙'
     },
     {
       name: 'LinkedIn',
       url: 'https://linkedin.com/in/cheikh-ari',
-      icon: '💼'
     },
     {
       name: 'Twitter',
       url: 'https://twitter.com/votre-compte',
-      icon: '🐦'
     }
   ];
 

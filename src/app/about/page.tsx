@@ -7,9 +7,9 @@ import { FiArrowUpRight, FiBriefcase, FiCode, FiCpu, FiMessageCircle, FiUsers, F
 const experiences = [
     {
       period: '2024 - Présent',
-      title: 'Développeur Frontend & Backend',
+      title: 'Développeur Fullstack',
       company: 'Projets Personnels',
-      description: 'Conception et développement d\'applications web full-stack, de l\'idéation au déploiement.',
+      description: 'Conception et développement d\'applications web, de l\'idéation au déploiement.',
       icon: <FiStar />
     },
     {
@@ -44,9 +44,9 @@ const hobbies = [
   ];
   
 const skills = [
-    { category: 'Frontend', technologies: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion'], icon: <FiCode /> },
-    { category: 'Backend', technologies: ['Node.js','PostgreSQL', 'Prisma', 'tRPC'], icon: <FiCpu /> },
-    { category: 'Outils', technologies: ['Git', 'Docker', 'Vercel', 'Figma'], icon: <FiDribbble /> },
+    { category: 'Frontend', technologies: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS'], icon: <FiCode /> },
+    { category: 'Backend', technologies: ['Node.js','PostgreSQL'], icon: <FiCpu /> },
+    { category: 'Outils', technologies: ['Git', 'Docker', 'Vercel'], icon: <FiDribbble /> },
   ];
 
 

@@ -12,24 +12,19 @@ const Navbar = () => {
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   
-  // --- NOUVELLE LOGIQUE DE SCROLL SIMPLIFIÉE ---
+  // La logique pour cacher/montrer la barre au scroll est conservée.
   const [isVisible, setIsVisible] = useState(true);
-  const [isScrolled, setIsScrolled] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
-      // 1. Détermine si on a scrollé (pour l'effet de fond)
-      setIsScrolled(currentScrollY > 10);
-
-      // 2. Détermine si on affiche ou on cache la barre (votre logique existante, légèrement améliorée)
-      // On ne cache la barre que si on n'est pas tout en haut
-      if (currentScrollY > 10 && currentScrollY > lastScrollY) {
-        setIsVisible(false); // Défilement vers le bas
+      // On cache la barre en défilant vers le bas, on la montre en défilant vers le haut
+      if (currentScrollY > 100 && currentScrollY > lastScrollY) {
+        setIsVisible(false); 
       } else {
-        setIsVisible(true);  // Défilement vers le haut
+        setIsVisible(true);
       }
       
       setLastScrollY(currentScrollY);
@@ -43,20 +38,19 @@ const Navbar = () => {
   const closeMenu = () => setIsMenuOpen(false);
 
   return (
-    // --- CORRECTION PRINCIPALE SUR LES CLASSES CSS ---
+    // --- MODIFICATION PRINCIPALE ---
+    // Le style de fond est maintenant permanent et plus simple.
+    // L'état `isScrolled` a été retiré de la logique de style.
     <nav 
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ease-in-out
-        ${isVisible ? 'translate-y-0' : '-translate-y-full'}
-        ${isScrolled 
-          ? 'bg-black/70 backdrop-blur-lg shadow-lg' // Style quand on a scrollé
-          : 'bg-transparent' // Style quand on est en haut
-        }`
+      className={`fixed top-0 w-full z-50 transition-transform duration-300 ease-in-out
+        bg-gray-950/80 backdrop-blur-lg border-b border-gray-800
+        ${isVisible ? 'translate-y-0' : '-translate-y-full'}`
       }
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           <div className="flex-shrink-0">
-            {/* Logo avec le nouveau style de couleurs */}
+            {/* Le logo est déjà parfait pour un fond sombre */}
             <Link 
               href="/" 
               className="text-2xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-sky-400 to-purple-500"
@@ -73,7 +67,7 @@ const Navbar = () => {
                 <Link 
                   key={item.name}
                   href={item.href} 
-                  // Liens avec le nouveau style de couleurs
+                  // Les couleurs des liens sont déjà parfaites pour un fond sombre
                   className="text-slate-300 hover:text-sky-400 px-3 py-2 text-sm lg:text-base font-medium transition-colors"
                 >
                   {item.name}
@@ -105,9 +99,8 @@ const Navbar = () => {
       </div>
 
       {/* Menu Mobile */}
-      {/* Amélioration : Utilisation de la visibilité pour l'accessibilité */}
       <div
-        className={`md:hidden absolute top-full left-0 w-full bg-black/95 backdrop-blur-lg shadow-lg
+        className={`md:hidden absolute top-full left-0 w-full bg-gray-950/95 backdrop-blur-lg shadow-lg
                    transition-all duration-300 ease-in-out ${isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}
         style={{ overflow: 'hidden' }}
       >
