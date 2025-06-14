@@ -2,10 +2,10 @@
 // npm install react-icons
 import Image from 'next/image';
 import Link from 'next/link';
-import { FiArrowRight, FiCode, FiDatabase, FiPenTool } from 'react-icons/fi';
+import { FiArrowRight, FiCode, FiPenTool } from 'react-icons/fi';
 import { SiNextdotjs, SiTypescript, SiTailwindcss } from 'react-icons/si';
 import { FaReact, FaNodeJs } from 'react-icons/fa';
-import { FiArrowUpRight } from 'react-icons/fi';
+
 
 // --- TROISIÈME PROJET AJOUTÉ CI-DESSOUS ---
 const featuredProjects = [
@@ -128,7 +128,7 @@ export default function HomePage() {
                     className="inline-flex items-center gap-2 text-sky-400 font-semibold
                                hover:text-sky-300 transition-colors duration-300"
                   >
-                    Découvrir le cas d'étude <FiArrowRight className="transition-transform group-hover:translate-x-1" />
+                    Découvrir le cas d&apos;étude <FiArrowRight className="transition-transform group-hover:translate-x-1" />
                   </Link>
                 </div>
               </div>
@@ -178,7 +178,7 @@ export default function HomePage() {
               Une approche complète
             </h2>
             <p className="mt-4 text-lg text-slate-400">
-              De l'interface utilisateur à la base de données, je couvre tout le spectre du développement web.
+              De l&apos;interface utilisateur à la base de données, je couvre tout le spectre du développement web.
             </p>
           </div>
 
@@ -186,12 +186,12 @@ export default function HomePage() {
             <div className="p-8 rounded-2xl border border-slate-800 hover:border-sky-500/50 transition-colors duration-300">
               <FiCode className="w-8 h-8 text-sky-400 mb-4"/>
               <h3 className="text-xl font-bold text-slate-100 mb-2">Développement Frontend</h3>
-              <p className="text-slate-400">Création d'interfaces réactives et interactives avec React & Next.js pour une expérience utilisateur exceptionnelle.</p>
+              <p className="text-slate-400">Création d&apos;interfaces réactives et interactives avec React & Next.js pour une expérience utilisateur exceptionnelle.</p>
             </div>
             <div className="p-8 rounded-2xl border border-slate-800 hover:border-emerald-500/50 transition-colors duration-300">
               <FiPenTool className="w-8 h-8 text-emerald-400 mb-4"/>
               <h3 className="text-xl font-bold text-slate-100 mb-2">UI/UX & Intégration</h3>
-              <p className="text-slate-400">Une attention particulière portée au design et à l'ergonomie, en transformant des maquettes Figma en code pixel-perfect.</p>
+              <p className="text-slate-400">Une attention particulière portée au design et à l&apos;ergonomie.</p>
             </div>
           </div>
         </div>
@@ -204,7 +204,7 @@ export default function HomePage() {
                 Prêt à concrétiser votre projet ?
             </h2>
             <p className="mt-4 mb-8 text-lg text-slate-400">
-                Je suis toujours ouvert à de nouvelles opportunités. N'hésitez pas à me contacter pour que nous puissions discuter de votre idée.
+                Je suis toujours ouvert à de nouvelles opportunités. N&apos;hésitez pas à me contacter pour que nous puissions discuter de votre idée.
             </p>
             <Link
                 href="/contact"
