@@ -125,39 +125,40 @@ export default function Home() {
 
         {/* Grille pour les projets */}
         <div className="max-w-7xl mx-auto">
-          {/* Ligne pour les deux premiers projets */}
-          <div className="grid md:grid-cols-2 gap-8 sm:gap-10 mb-8 sm:mb-10">
+          {/* Ligne pour les deux premiers projets (largeur réduite) */}
+          <div className="grid md:grid-cols-2 gap-8 sm:gap-10 mb-8 sm:mb-10 lg:gap-12 xl:gap-16">
             {projects.slice(0, 2).map((project) => (
               <div 
                 key={project.id} 
+                // Ajout de max-w-md ou similaire pour réduire la largeur sur les grands écrans
                 className="group flex flex-col rounded-xl sm:rounded-2xl overflow-hidden bg-gray-900/70 border border-gray-700/50
                            transition-all duration-300 ease-out hover:border-purple-500/60 
-                           hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-purple-500/25"
+                           hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-purple-500/25 mx-auto w-full sm:max-w-sm md:max-w-xs lg:max-w-sm xl:max-w-md"
               >
                 {/* Conteneur pour l'image */}
-                <div className="relative w-full h-56 sm:h-64 md:h-72 overflow-hidden">
+                <div className="relative w-full h-48 sm:h-56 md:h-60 lg:h-64 xl:h-72 overflow-hidden"> {/* Hauteur d'image ajustée */} 
                   <Image
                     src={project.image}
                     alt={project.title}
                     fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw" // Ajustement des sizes
                     className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
                   />
                 </div>
                 
-                {/* Conteneur pour le texte */}
-                <div className="flex flex-col flex-grow p-5 sm:p-6">
-                  <h3 className="text-xl sm:text-2xl font-bold mb-2 text-white">
+                {/* Conteneur pour le texte */} 
+                <div className="flex flex-col flex-grow p-4 sm:p-5">
+                  <h3 className="text-lg sm:text-xl font-bold mb-2 text-white">
                     {project.title}
                   </h3>
-                  <p className="text-gray-300 mt-1 mb-4 text-sm sm:text-base leading-relaxed flex-grow line-clamp-4">
+                  <p className="text-gray-300 mt-1 mb-3 text-xs sm:text-sm leading-relaxed flex-grow line-clamp-3 sm:line-clamp-4">
                     {project.description}
                   </p>
-                  <div className="flex flex-wrap gap-2 mb-4 sm:mb-5">
+                  <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-3 sm:mb-4">
                     {project.tags.map((tag) => (
                       <span 
                         key={tag} 
-                        className="px-3 py-1 bg-white/10 text-purple-300 border border-white/20 rounded-full text-xs sm:text-sm font-medium"
+                        className="px-2.5 py-1 bg-white/10 text-purple-300 border border-white/20 rounded-full text-[10px] sm:text-xs font-medium"
                       >
                         {tag}
                       </span>
@@ -167,51 +168,52 @@ export default function Home() {
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center mt-auto text-sm sm:text-base font-semibold text-white
+                    className="inline-flex items-center mt-auto text-xs sm:text-sm font-semibold text-white
                                hover:text-purple-300 group-hover:text-purple-300 transition-colors duration-300"
                   >
                     Voir le projet
-                    <FiArrowUpRight className="h-4 w-4 ml-1.5 transition-transform duration-300 group-hover:translate-x-0.5" />
+                    <FiArrowUpRight className="h-3.5 w-3.5 sm:h-4 sm:w-4 ml-1.5 transition-transform duration-300 group-hover:translate-x-0.5" />
                   </a>
                 </div>
               </div>
             ))}
           </div>
 
-          {/* Ligne pour le dernier projet (plus grand) */}
+          {/* Ligne pour le dernier projet (largeur augmentée) */}
           {projects.length > 2 && (
-            <div className="grid md:grid-cols-1 gap-8 sm:gap-10">
+            <div className="grid grid-cols-1 gap-8 sm:gap-10">
               {projects.slice(2, 3).map((project) => (
                 <div 
                   key={project.id} 
-                  // Vous pouvez ajouter des classes ici pour le rendre plus grand, par exemple: md:col-span-2 lg:col-span-3 si vous étiez dans une grille plus large
-                  // Ou ajuster la hauteur de l'image ou du conteneur de texte spécifiquement pour ce projet.
-                  // Pour cet exemple, nous allons le garder similaire mais il sera seul sur sa ligne.
+                  // Ajustement de la largeur pour qu'elle soit plus grande, essayant de correspondre à la somme des deux autres
+                  // Sur les grands écrans, on utilise w-full à l'intérieur d'un conteneur qui a une largeur max
+                  // Le conteneur parent `max-w-7xl` et les `gap` de la grille supérieure influencent la largeur disponible.
+                  // On peut utiliser `lg:max-w-4xl xl:max-w-5xl` pour le faire s'étendre davantage.
                   className="group flex flex-col rounded-xl sm:rounded-2xl overflow-hidden bg-gray-900/70 border border-gray-700/50
                              transition-all duration-300 ease-out hover:border-purple-500/60 
-                             hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-purple-500/25 md:max-w-2xl lg:max-w-3xl mx-auto w-full"
+                             hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-purple-500/25 mx-auto w-full md:max-w-2xl lg:max-w-4xl xl:max-w-5xl"
                 >
-                  <div className="relative w-full h-64 sm:h-80 md:h-96 overflow-hidden"> {/* Hauteur d'image potentiellement plus grande */} 
+                  <div className="relative w-full h-64 sm:h-80 md:h-96 lg:h-[500px] xl:h-[600px] overflow-hidden"> {/* Hauteur d'image augmentée */} 
                     <Image
                       src={project.image}
                       alt={project.title}
                       fill
-                      sizes="(max-width: 768px) 100vw, 50vw" // Ajuster sizes si nécessaire
+                      sizes="(max-width: 768px) 100vw, 80vw" // Ajuster sizes
                       className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
                     />
                   </div>
-                  <div className="flex flex-col flex-grow p-5 sm:p-6">
-                    <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2 text-white">
+                  <div className="flex flex-col flex-grow p-5 sm:p-6 md:p-8">
+                    <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 md:mb-4 text-white">
                       {project.title}
                     </h3>
-                    <p className="text-gray-300 mt-1 mb-4 text-sm sm:text-base md:text-lg leading-relaxed flex-grow line-clamp-5">
+                    <p className="text-gray-300 mt-1 mb-4 sm:mb-5 text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed flex-grow line-clamp-4 sm:line-clamp-5">
                       {project.description}
                     </p>
-                    <div className="flex flex-wrap gap-2 mb-4 sm:mb-5">
+                    <div className="flex flex-wrap gap-2 sm:gap-2.5 mb-4 sm:mb-5 md:mb-6">
                       {project.tags.map((tag) => (
                         <span 
                           key={tag} 
-                          className="px-3 py-1 bg-white/10 text-purple-300 border border-white/20 rounded-full text-xs sm:text-sm font-medium"
+                          className="px-3 py-1.5 bg-white/10 text-purple-300 border border-white/20 rounded-full text-xs sm:text-sm md:text-base font-medium"
                         >
                           {tag}
                         </span>
@@ -221,11 +223,11 @@ export default function Home() {
                       href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center mt-auto text-sm sm:text-base md:text-lg font-semibold text-white
+                      className="inline-flex items-center mt-auto text-sm sm:text-base md:text-lg lg:text-xl font-semibold text-white
                                  hover:text-purple-300 group-hover:text-purple-300 transition-colors duration-300"
                     >
                       Voir le projet
-                      <FiArrowUpRight className="h-4 w-4 md:h-5 md:w-5 ml-1.5 transition-transform duration-300 group-hover:translate-x-0.5" />
+                      <FiArrowUpRight className="h-4 w-4 md:h-5 md:w-5 lg:h-6 lg:w-6 ml-1.5 transition-transform duration-300 group-hover:translate-x-0.5" />
                     </a>
                   </div>
                 </div>
