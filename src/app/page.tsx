@@ -48,7 +48,8 @@ export default function HomePage() {
         style={{backgroundImage: 'radial-gradient(ellipse 80% 80% at 50% -20%, rgba(14, 165, 233, 0.15), rgba(255, 255, 255, 0))'}}
       />
 
-      <div className="min-h-screen bg-black text-slate-300 font-sans"> {/* Changé en bg-black */}
+      {/* MODIFICATION ICI: Ajout de la classe 'relative' */}
+      <div className="relative min-h-screen bg-black text-slate-300 font-sans"> 
         
         {/* --- SECTION 1: HÉROS --- */}
         <section className="relative flex flex-col items-center justify-center min-h-screen text-center px-6 pt-24 pb-16">
