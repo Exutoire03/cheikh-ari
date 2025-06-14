@@ -1,5 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { SiNextdotjs, SiTypescript, SiTailwindcss } from 'react-icons/si';
+import { FaReact, FaNodeJs } from 'react-icons/fa';
 
 export default function Home() {
   const projects = [
@@ -27,7 +29,17 @@ export default function Home() {
       tags: ['React', 'Tailwind CSS', 'Supabase'],
       link: 'https://eig-soutenance.vercel.app/'
     },
-  ]
+  ];
+
+  const skills = [
+    { name: 'React', icon: <FaReact size={48} className="mx-auto" /> },
+    { name: 'Next.js', icon: <SiNextdotjs size={48} className="mx-auto" /> },
+    { name: 'TypeScript', icon: <SiTypescript size={48} className="mx-auto" /> },
+    { name: 'Node.js', icon: <FaNodeJs size={48} className="mx-auto" /> },
+    { name: 'Tailwind CSS', icon: <SiTailwindcss size={48} className="mx-auto" /> },
+    // Ajoutez d'autres compétences ici
+  ];
+  
 
   return (
     <div className="min-h-screen bg-black text-white">
@@ -65,35 +77,36 @@ export default function Home() {
 
       {/* Skills Section */}
       <section className="py-32 bg-gradient-to-b from-black/80 to-black">
-        <div className="max-w-[2000px] mx-auto px-8 lg:px-16">
-          <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">
-              Mes Compétences
-            </h2>
-            <p className="text-xl text-gray-300 leading-relaxed">
-              Les technologies que j&apos;utilise pour donner vie à vos projets
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-x-8 gap-y-12 max-w-7xl mx-auto">
-            {[
-              'React', 'Next.js', 'TypeScript', 'Node.js',
-              'Tailwind CSS'
-            ].map((skill) => (
-              <div 
-                key={skill} 
-                className="p-8 rounded-xl bg-gradient-to-b from-gray-900/80 to-gray-900/40
-                         backdrop-blur-sm hover:transform hover:scale-105 transition-all duration-500
-                         shadow-xl hover:shadow-purple-500/20 group"
-              >
-                <p className="text-xl font-semibold text-gray-200 group-hover:text-purple-400 transition-colors text-center">
-                  {skill}
-                </p>
-              </div>
-            ))}
-          </div>
+      <div className="max-w-[2000px] mx-auto px-8 lg:px-16">
+        <div className="max-w-3xl mx-auto text-center mb-20">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">
+            Mes Compétences
+          </h2>
+          <p className="text-xl text-gray-300 leading-relaxed tracking-wide">
+            Les technologies que j'utilise pour donner vie à vos projets.
+          </p>
         </div>
-      </section>
+        
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 max-w-7xl mx-auto">
+          {skills.map((skill) => (
+            <div 
+              key={skill.name} 
+              className="group relative p-8 rounded-xl bg-gray-900/60 border border-white/10
+                       backdrop-blur-sm transition-all duration-300 ease-in-out
+                       hover:border-purple-500/50 hover:bg-gray-900/80 hover:-translate-y-2
+                       hover:shadow-2xl hover:shadow-purple-500/20"
+            >
+              <div className="text-gray-400 group-hover:text-purple-400 transition-colors duration-300 mb-4">
+                {skill.icon}
+              </div>
+              <p className="text-lg font-semibold text-gray-200 text-center tracking-wider">
+                {skill.name}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
 
       {/* Projects Section */}
       <section id="projects" className="py-32 bg-gradient-to-b from-black to-black/80">
