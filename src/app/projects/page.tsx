@@ -1,7 +1,6 @@
 "use client"; // Nécessaire pour utiliser useState
 
 import Image from 'next/image';
-import Link from 'next/link';
 import { useState } from 'react';
 import { FiArrowUpRight } from 'react-icons/fi';
 
