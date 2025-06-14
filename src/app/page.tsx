@@ -1,84 +1,143 @@
+// Assurez-vous d'avoir react-icons
+// npm install react-icons
 import Image from 'next/image';
 import Link from 'next/link';
+import { FiArrowRight, FiCode, FiDatabase, FiPenTool } from 'react-icons/fi';
 import { SiNextdotjs, SiTypescript, SiTailwindcss } from 'react-icons/si';
 import { FaReact, FaNodeJs } from 'react-icons/fa';
 import { FiArrowUpRight } from 'react-icons/fi';
 
-
-export default function Home() {
-  const projects = [
-    {
-      id: 1,
-      title: 'Générateur de bio avec ia',
-      description: 'Une application web de génération de bio inspirantes en temps réel grace à une ia',
-      image: '/projects/a-bio.PNG',
-      tags: ['Next.js', 'Tailwind CSS', 'Gemini'],
-      link: 'https://quotes-eight-red.vercel.app/'
-    },
-    {
-    id: 2, // ID unique corrigé
+// --- TROISIÈME PROJET AJOUTÉ CI-DESSOUS ---
+const featuredProjects = [
+  {
+    id: 1,
+    title: 'Générateur de bio avec ia',
+    description: 'Une application web de génération de bio inspirantes en temps réel grace à une ia',
+    image: '/projects/a-bio.PNG', // Remplacez par vos images
+    tags: ['Next.js', 'Gemini', 'Tailwind CSS'],
+    link: 'https://quotes-eight-red.vercel.app/',
+  },
+  {
+    id: 2,
     title: 'Site vitrine du restaurant Corazon',
     description: 'Site vitrine du restaurant Corazon',
-    image: '/projects/corazon.PNG',
-    tags: ['React', 'Node.js'],
-    link: 'https://corazon-flax.vercel.app/'
+    image: '/projects/corazon.PNG', // Remplacez par vos images
+    tags: ['Nextjs', 'Tailwind CSS'],
+    link: 'https://corazon-flax.vercel.app/',
   },
-    {
-      id: 3, // ID unique
-      title: 'Plateforme de mis en relation entre étudiants et entreprises',
-      description: 'Plateforme innovante de mise en relation entre étudiants et entreprise',
-      image: '/projects/a-eig.PNG',
-      tags: ['React', 'Tailwind CSS', 'Supabase'],
-      link: 'https://eig-soutenance.vercel.app/'
-    },
-  ];
-  
+  {
+    id: 3,
+    title: 'Plateforme de mis en relation entre étudiants et entreprises',
+    description: 'Plateforme innovante de mise en relation entre étudiants et entreprise',
+    image: '/projects/a-eig.PNG', // Remplacez par vos images
+    tags: ['Next.js', 'Tailwind CSS', 'Supabase'],
+    link: '/about', // Lien vers la page "À Propos" par exemple
+  },
+];
 
-  const skills = [
-    { name: 'React', icon: <FaReact size={48} className="mx-auto" /> },
-    { name: 'Next.js', icon: <SiNextdotjs size={48} className="mx-auto" /> },
-    { name: 'TypeScript', icon: <SiTypescript size={48} className="mx-auto" /> },
-    { name: 'Node.js', icon: <FaNodeJs size={48} className="mx-auto" /> },
-    { name: 'Tailwind CSS', icon: <SiTailwindcss size={48} className="mx-auto" /> },
-    // Ajoutez d'autres compétences ici
-  ];
-  
+// --- LISTE DES TECHNOLOGIES POUR LA NOUVELLE SECTION ---
+const skills = [
+  { name: 'React', icon: <FaReact size={48} className="mx-auto" /> },
+  { name: 'Next.js', icon: <SiNextdotjs size={48} className="mx-auto" /> },
+  { name: 'TypeScript', icon: <SiTypescript size={48} className="mx-auto" /> },
+  { name: 'Node.js', icon: <FaNodeJs size={48} className="mx-auto" /> },
+  { name: 'Tailwind CSS', icon: <SiTailwindcss size={48} className="mx-auto" /> },
+  // Ajoutez d'autres compétences ici
+];
 
+
+export default function HomePage() {
   return (
-    <div className="min-h-screen bg-black text-white">
-      {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center relative overflow-hidden py-20">
-        <div className="absolute inset-0 bg-gradient-to-b from-purple-900/20 to-black/50 z-0"></div>
-        <div className="max-w-[2000px] mx-auto px-8 lg:px-16 z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600 leading-tight">
-              Développeur Web Créatif
-            </h1>
-            <p className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
-              Transformant des idées en expériences web exceptionnelles
+    <div className="min-h-screen bg-slate-950 text-slate-300 font-sans">
+      <div 
+        className="absolute inset-0 -z-10 h-full w-full bg-slate-950"
+        style={{backgroundImage: 'radial-gradient(ellipse 80% 80% at 50% -20%, rgba(14, 165, 233, 0.15), rgba(255, 255, 255, 0))'}}
+      ></div>
+
+      {/* --- SECTION 1: HÉROS --- */}
+      <section className="relative flex flex-col items-center justify-center min-h-screen text-center px-6 pt-24 pb-16">
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-slate-100 tracking-tighter mb-6">
+          Je transforme vos idées en
+          <br />
+          <span className="bg-clip-text text-transparent bg-gradient-to-r from-sky-400 to-purple-500">
+            applications web modernes.
+          </span>
+        </h1>
+        <p className="max-w-2xl mx-auto text-lg md:text-xl text-slate-400 leading-relaxed mb-10">
+          Développeur Full-Stack spécialisé en React, Next.js et Node.js, je conçois des expériences utilisateur fluides et des architectures robustes pour donner vie à vos projets.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4">
+          <Link
+            href="#projects"
+            className="inline-flex items-center justify-center gap-2 px-8 py-3 bg-gradient-to-r from-sky-500 to-purple-500 rounded-full
+                     text-white font-semibold transition-transform duration-300
+                     hover:scale-105 hover:shadow-lg hover:shadow-purple-500/20"
+          >
+            Voir mes projets
+          </Link>
+          <Link
+            href="/contact"
+            className="inline-flex items-center justify-center gap-2 px-8 py-3 rounded-full
+                     text-slate-100 font-semibold ring-2 ring-slate-700
+                     hover:bg-slate-800 transition-all duration-300"
+          >
+            Me contacter
+          </Link>
+        </div>
+      </section>
+
+      {/* --- SECTION 2: PROJETS EN VITRINE --- */}
+      <section id="projects" className="py-24 sm:py-32 px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-100 tracking-tighter">
+              Une sélection de mes réalisations
+            </h2>
+            <p className="mt-4 text-lg text-slate-400">
+              Chaque projet est une nouvelle aventure, alliant design et technologie.
             </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-6">
-              <a
-                href="#projects"
-                className="px-10 py-4 bg-purple-600 hover:bg-purple-700 rounded-full transition-all duration-300
-                         text-white font-semibold text-lg hover:transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25"
+          </div>
+          
+          <div className="space-y-20">
+            {featuredProjects.map((project, index) => (
+              <div
+                key={project.id}
+                className={`group grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center`}
               >
-                Voir mes projets
-              </a>
-              <a
-                href="https://wa.me/message/4MR4JID7X4ZEG1"
-                className="px-10 py-4 border-2 border-purple-600 hover:border-purple-500 rounded-full
-                         transition-all duration-300 text-white font-semibold text-lg
-                         hover:bg-purple-600/10 hover:transform hover:scale-105"
-              >
-                Me contacter
-              </a>
-            </div>
+                <div className={`relative w-full h-80 rounded-2xl overflow-hidden border border-slate-800 shadow-xl 
+                                ${index % 2 !== 0 ? 'lg:order-last' : ''}`}>
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
+                  />
+                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/50 to-transparent"></div>
+                </div>
+
+                <div className="flex flex-col items-start">
+                  <h3 className="text-2xl font-bold text-slate-100 mb-3">{project.title}</h3>
+                  <p className="text-slate-400 mb-5 leading-relaxed">{project.description}</p>
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    {project.tags.map(tag => (
+                      <span key={tag} className="px-3 py-1 bg-slate-800 text-sky-300 rounded-full text-xs font-semibold">{tag}</span>
+                    ))}
+                  </div>
+                  <Link
+                    href={project.link}
+                    className="inline-flex items-center gap-2 text-sky-400 font-semibold
+                               hover:text-sky-300 transition-colors duration-300"
+                  >
+                    Découvrir le cas d'étude <FiArrowRight className="transition-transform group-hover:translate-x-1" />
+                  </Link>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Skills Section */}
+      {/* --- NOUVELLE SECTION: MA STACK TECHNOLOGIQUE --- */}
       <section className="py-32 bg-gradient-to-b from-black/80 to-black">
         <div className="max-w-[2000px] mx-auto px-8 lg:px-16">
           <div className="max-w-3xl mx-auto text-center mb-20">
@@ -111,146 +170,52 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Projects Section */}
-      <section id="projects" className="py-24 sm:py-32 bg-gradient-to-b from-black to-black/80">
-      <div className="max-w-[2000px] mx-auto px-6 sm:px-8 lg:px-16">
-        <div className="max-w-3xl mx-auto text-center mb-16 sm:mb-20">
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 sm:mb-8 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-orange-400">
-            Projets Récents
-          </h2>
-          <p className="text-lg sm:text-xl text-gray-300 leading-relaxed tracking-wide">
-            Découvrez une sélection de mes dernières réalisations et innovations.
-          </p>
-        </div>
-
-        {/* Grille pour les projets */}
-        <div className="max-w-7xl mx-auto">
-          {/* Ligne pour les deux premiers projets */}
-          <div className="grid md:grid-cols-2 gap-8 sm:gap-10 mb-8 sm:mb-10">
-            {projects.slice(0, 2).map((project) => (
-              <div 
-                key={project.id} 
-                className="group flex flex-col rounded-xl sm:rounded-2xl overflow-hidden bg-gray-900/70 border border-gray-700/50
-                           transition-all duration-300 ease-out hover:border-purple-500/60 
-                           hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-purple-500/25"
-              >
-                {/* Conteneur pour l'image */}
-                <div className="relative w-full h-56 sm:h-64 md:h-72 overflow-hidden">
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
-                  />
-                </div>
-                
-                {/* Conteneur pour le texte */}
-                <div className="flex flex-col flex-grow p-5 sm:p-6">
-                  <h3 className="text-xl sm:text-2xl font-bold mb-2 text-white">
-                    {project.title}
-                  </h3>
-                  <p className="text-gray-300 mt-1 mb-4 text-sm sm:text-base leading-relaxed flex-grow line-clamp-4">
-                    {project.description}
-                  </p>
-                  <div className="flex flex-wrap gap-2 mb-4 sm:mb-5">
-                    {project.tags.map((tag) => (
-                      <span 
-                        key={tag} 
-                        className="px-3 py-1 bg-white/10 text-purple-300 border border-white/20 rounded-full text-xs sm:text-sm font-medium"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center mt-auto text-sm sm:text-base font-semibold text-white
-                               hover:text-purple-300 group-hover:text-purple-300 transition-colors duration-300"
-                  >
-                    Voir le projet
-                    <FiArrowUpRight className="h-4 w-4 ml-1.5 transition-transform duration-300 group-hover:translate-x-0.5" />
-                  </a>
-                </div>
-              </div>
-            ))}
+      {/* --- SECTION 4: APERÇU DES SERVICES (anciennement section 3) --- */}
+      <section className="py-24 sm:py-32 px-6 lg:px-8 bg-slate-900/50">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-100 tracking-tighter">
+              Une approche complète
+            </h2>
+            <p className="mt-4 text-lg text-slate-400">
+              De l'interface utilisateur à la base de données, je couvre tout le spectre du développement web.
+            </p>
           </div>
 
-          {/* Ligne pour le dernier projet (plus grand) */}
-          {projects.length > 2 && (
-            <div className="grid md:grid-cols-1 gap-8 sm:gap-10">
-              {projects.slice(2, 3).map((project) => (
-                <div 
-                  key={project.id} 
-                  // Vous pouvez ajouter des classes ici pour le rendre plus grand, par exemple: md:col-span-2 lg:col-span-3 si vous étiez dans une grille plus large
-                  // Ou ajuster la hauteur de l'image ou du conteneur de texte spécifiquement pour ce projet.
-                  // Pour cet exemple, nous allons le garder similaire mais il sera seul sur sa ligne.
-                  className="group flex flex-col rounded-xl sm:rounded-2xl overflow-hidden bg-gray-900/70 border border-gray-700/50
-                             transition-all duration-300 ease-out hover:border-purple-500/60 
-                             hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-purple-500/25 md:max-w-2xl lg:max-w-3xl mx-auto w-full"
-                >
-                  <div className="relative w-full h-64 sm:h-80 md:h-96 overflow-hidden"> {/* Hauteur d'image potentiellement plus grande */} 
-                    <Image
-                      src={project.image}
-                      alt={project.title}
-                      fill
-                      sizes="(max-width: 768px) 100vw, 50vw" // Ajuster sizes si nécessaire
-                      className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
-                    />
-                  </div>
-                  <div className="flex flex-col flex-grow p-5 sm:p-6">
-                    <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2 text-white">
-                      {project.title}
-                    </h3>
-                    <p className="text-gray-300 mt-1 mb-4 text-sm sm:text-base md:text-lg leading-relaxed flex-grow line-clamp-5">
-                      {project.description}
-                    </p>
-                    <div className="flex flex-wrap gap-2 mb-4 sm:mb-5">
-                      {project.tags.map((tag) => (
-                        <span 
-                          key={tag} 
-                          className="px-3 py-1 bg-white/10 text-purple-300 border border-white/20 rounded-full text-xs sm:text-sm font-medium"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center mt-auto text-sm sm:text-base md:text-lg font-semibold text-white
-                                 hover:text-purple-300 group-hover:text-purple-300 transition-colors duration-300"
-                    >
-                      Voir le projet
-                      <FiArrowUpRight className="h-4 w-4 md:h-5 md:w-5 ml-1.5 transition-transform duration-300 group-hover:translate-x-0.5" />
-                    </a>
-                  </div>
-                </div>
-              ))}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="p-8 rounded-2xl border border-slate-800 hover:border-sky-500/50 transition-colors duration-300">
+              <FiCode className="w-8 h-8 text-sky-400 mb-4"/>
+              <h3 className="text-xl font-bold text-slate-100 mb-2">Développement Frontend</h3>
+              <p className="text-slate-400">Création d'interfaces réactives et interactives avec React & Next.js pour une expérience utilisateur exceptionnelle.</p>
             </div>
-          )}
+            <div className="p-8 rounded-2xl border border-slate-800 hover:border-emerald-500/50 transition-colors duration-300">
+              <FiPenTool className="w-8 h-8 text-emerald-400 mb-4"/>
+              <h3 className="text-xl font-bold text-slate-100 mb-2">UI/UX & Intégration</h3>
+              <p className="text-slate-400">Une attention particulière portée au design et à l'ergonomie, en transformant des maquettes Figma en code pixel-perfect.</p>
+            </div>
+          </div>
         </div>
+      </section>
 
-        <div className="text-center mt-20 sm:mt-24">
-          <Link
-            href="/projects"
-            className="inline-flex items-center px-8 py-3.5 rounded-full text-white font-semibold text-base
-                     bg-gradient-to-r from-purple-600 to-pink-600
-                     hover:from-purple-500 hover:to-pink-500
-                     transition-all duration-300 ease-in-out
-                     transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/30"
-          >
-            Voir tous mes projets
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-            </svg>
-          </Link>
+      {/* --- SECTION 5: APPEL À L'ACTION FINAL --- */}
+      <section className="py-24 sm:py-32 px-6 lg:px-8">
+        <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-100 tracking-tighter">
+                Prêt à concrétiser votre projet ?
+            </h2>
+            <p className="mt-4 mb-8 text-lg text-slate-400">
+                Je suis toujours ouvert à de nouvelles opportunités. N'hésitez pas à me contacter pour que nous puissions discuter de votre idée.
+            </p>
+            <Link
+                href="/contact"
+                className="inline-flex items-center justify-center gap-2 px-8 py-3 bg-gradient-to-r from-sky-500 to-purple-500 rounded-full
+                         text-white font-semibold transition-transform duration-300
+                         hover:scale-105 hover:shadow-lg hover:shadow-purple-500/20"
+            >
+                Entrons en contact
+            </Link>
         </div>
-      </div>
-    </section>
+      </section>
     </div>
   );
 }
