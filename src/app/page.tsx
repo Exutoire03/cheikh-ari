@@ -69,14 +69,14 @@ export default function HomePage() {
           >
             Voir mes projets
           </Link>
-          <Link
-            href="/contact"
+          <a 
+            href="mailto:cheikhdev.web@gmail.com" 
             className="inline-flex items-center justify-center gap-2 px-8 py-3 rounded-full
-                     text-slate-100 font-semibold ring-2 ring-gray-700
-                     hover:bg-gray-800 transition-all duration-300"
+              text-slate-100 font-semibold ring-2 ring-gray-700
+              hover:bg-gray-800 transition-all duration-300"
           >
             Me contacter
-          </Link>
+          </a>
         </div>
       </section>
 
@@ -114,6 +114,16 @@ export default function HomePage() {
               </div>
             ))}
           </div>
+        </div>
+        <div className="text-center mt-12">
+        <Link
+            href="/projects"
+            className="inline-flex  mt-12 gap-2 px-8 py-3 bg-gradient-to-r from-sky-500 to-purple-500 rounded-full
+                     text-white font-semibold transition-transform duration-300
+                     hover:scale-105 hover:shadow-lg hover:shadow-purple-500/20"
+          >
+            Voir plus de projets
+          </Link>
         </div>
       </section>
 
