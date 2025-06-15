@@ -69,14 +69,14 @@ export default function HomePage() {
           >
             Voir mes projets
           </Link>
-          <Link
-            href="/contact"
+          <a 
+            href="mailto:cheikhdev.web@gmail.com" 
             className="inline-flex items-center justify-center gap-2 px-8 py-3 rounded-full
-                     text-slate-100 font-semibold ring-2 ring-gray-700
-                     hover:bg-gray-800 transition-all duration-300"
+              text-slate-100 font-semibold ring-2 ring-gray-700
+              hover:bg-gray-800 transition-all duration-300"
           >
             Me contacter
-          </Link>
+          </a>
         </div>
       </section>
 

@@ -15,7 +15,6 @@ const Footer = () => {
   const socialLinks = [
     { name: 'GitHub', href: 'https://github.com/Exutoire03', icon: <FiGithub size={20} /> },
     { name: 'LinkedIn', href: 'https://linkedin.com/in/cheikh-ari', icon: <FiLinkedin size={20} /> },
-    { name: 'Twitter', href: 'https://twitter.com/votre-compte', icon: <FiTwitter size={20} /> },
   ];
 
   return (
@@ -33,7 +32,7 @@ const Footer = () => {
               Cheikh Ari
             </Link>
             <p className="text-slate-400 max-w-sm leading-relaxed">
-              Développeur Frontend passionné par la création d'expériences web performantes et esthétiques.
+              Développeur Frontend passionné par la création d&apos;expériences web performantes et esthétiques.
             </p>
             <div>
               <h3 className="text-sm font-semibold text-slate-300 uppercase tracking-wider mb-3">Discutons de votre projet</h3>
