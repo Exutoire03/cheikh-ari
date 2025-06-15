@@ -115,6 +115,16 @@ export default function HomePage() {
             ))}
           </div>
         </div>
+        <div className="text-center mt-12">
+        <Link
+            href="/projects"
+            className="inline-flex  mt-12 gap-2 px-8 py-3 bg-gradient-to-r from-sky-500 to-purple-500 rounded-full
+                     text-white font-semibold transition-transform duration-300
+                     hover:scale-105 hover:shadow-lg hover:shadow-purple-500/20"
+          >
+            Voir plus de projets
+          </Link>
+        </div>
       </section>
 
       {/* --- SECTION 3: COMPÉTENCES TECHNIQUES --- */}
