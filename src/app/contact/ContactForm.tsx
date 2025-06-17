@@ -1,11 +1,9 @@
-// app/contact/ContactForm.tsx
-
-'use client'; // Ce composant est interactif
+'use client'; 
 
 import { useState, useEffect } from 'react';
-import { FiMail, FiPhone, FiMapPin, FiGithub, FiLinkedin, FiTwitter, FiSend } from 'react-icons/fi';
+import { FiMail, FiPhone, FiMapPin, FiGithub, FiLinkedin, FiSend } from 'react-icons/fi';
 
-// Le composant commence ici. Notez qu'il n'y a plus de metadata.
+
 export default function ContactForm() {
   const [formData, setFormData] = useState({
     name: '',
@@ -45,14 +43,13 @@ export default function ContactForm() {
   const socialLinks = [
     { name: 'GitHub', url: 'https://github.com/Exutoire03', icon: <FiGithub /> },
     { name: 'LinkedIn', url: 'https://linkedin.com/in/cheikh-ari', icon: <FiLinkedin /> },
-    { name: 'Twitter', url: 'https://twitter.com/votre-compte', icon: <FiTwitter /> }
   ];
 
   return (
-    // La grille commence ici
+   
     <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
       
-      {/* Colonne du formulaire (Action) */}
+      
       <div className={`lg:col-span-7 transition-all duration-1000 delay-200 transform ${isVisible ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'}`}>
         <div className="p-8 bg-gray-950/50 border border-gray-800 rounded-2xl backdrop-blur-sm">
           <form onSubmit={handleSubmit} className="space-y-6">
@@ -113,7 +110,7 @@ export default function ContactForm() {
         </div>
       </div>
 
-      {/* Colonne d'information */}
+      
       <div className={`lg:col-span-5 lg:sticky lg:top-28 space-y-12 transition-all duration-1000 delay-300 transform ${isVisible ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'}`}>
         
         <div>
