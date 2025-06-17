@@ -2,8 +2,7 @@
 import Image from 'next/image';
 import { FiArrowUpRight, FiBriefcase, FiCode, FiCpu, FiMessageCircle, FiUsers, FiAward, FiStar, FiCamera, FiGlobe, FiBookOpen, FiEdit3, FiActivity, FiDribbble, FiGitMerge } from 'react-icons/fi';
 
-// Les données restent les mêmes, c'est la présentation qui change radicalement.
-// J'ai juste ajouté des icônes pour l'expérience.
+
 const experiences = [
     {
       period: '2024 - Présent',
@@ -52,12 +51,11 @@ const skills = [
 
 export default function AboutPageRedesigned() {
   return (
-    // Palette de couleurs : fond bleu nuit, texte blanc cassé
+    
     <div className="min-h-screen bg-slate-950 text-slate-300 font-sans pt-28 pb-24">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
         {/* --- SECTION 1: HÉROS / INTRODUCTION --- */}
-        {/* Une introduction plus personnelle et directe. L'image est un élément de design, pas juste une photo. */}
         <section className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center mb-32">
           <div className="lg:col-span-2 space-y-6">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-100 tracking-tighter">
@@ -80,7 +78,7 @@ export default function AboutPageRedesigned() {
           <div className="relative w-full max-w-xs mx-auto lg:max-w-none h-80 lg:h-96">
              <div className="absolute inset-0 bg-gradient-to-tr from-sky-500/30 to-purple-500/30 rounded-3xl transform -rotate-6"></div>
              <Image
-              src="/projects/ari.jpg" // Remplacez par votre image
+              src="/projects/ari.jpg" 
               alt="Photo de Cheikh Ari"
               fill
               className="object-cover rounded-3xl shadow-2xl transform rotate-3 hover:rotate-0 hover:scale-105 transition-transform duration-500"
@@ -89,11 +87,9 @@ export default function AboutPageRedesigned() {
         </section>
 
         {/* --- SECTION 2: EXPÉRIENCE (TIMELINE) --- */}
-        {/* Une timeline verticale pour un affichage plus dynamique et narratif du parcours. */}
         <section className="mb-32">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-slate-100 tracking-tighter">Mon Parcours Professionnel</h2>
           <div className="relative max-w-2xl mx-auto">
-            {/* La ligne verticale de la timeline */}
             <div className="absolute left-4 top-0 h-full w-0.5 bg-slate-800" aria-hidden="true"></div>
             
             <div className="space-y-12">
@@ -115,7 +111,6 @@ export default function AboutPageRedesigned() {
         </section>
 
         {/* --- SECTION 3: COMPÉTENCES & ATOUTS (BENTO GRID) --- */}
-        {/* On combine les compétences techniques et soft skills dans une grille asymétrique (Bento) pour un rendu moderne. */}
         <section className="mb-32">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-slate-100 tracking-tighter">Compétences & Atouts</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -149,7 +144,7 @@ export default function AboutPageRedesigned() {
         </section>
         
         {/* --- SECTION 4: HOBBIES / AU-DELÀ DU CODE --- */}
-        {/* Une section plus légère pour montrer votre personnalité. */}
+        
         <section>
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-slate-100 tracking-tighter">Au-delà du Code</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 text-center">

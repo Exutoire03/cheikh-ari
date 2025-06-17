@@ -9,7 +9,7 @@ const featuredProjects = [
     id: 1,
     title: 'Générateur de bio avec IA',
     description: 'Une application web de génération de bio inspirantes en temps réel grâce à une IA.',
-    image: '/projects/a-bio.PNG',
+    image: '/projects/biospark.PNG',
     tags: ['Next.js', 'Gemini', 'Tailwind CSS'],
     link: 'https://quotes-eight-red.vercel.app/',
   },
@@ -42,13 +42,10 @@ const skills = [
 
 export default function HomePage() {
   return (
-    // MODIFICATION PRINCIPALE :
-    // 1. Le div décoratif en position absolue a été supprimé.
-    // 2. Ce conteneur principal reçoit maintenant directement le fond noir.
+
     <div className="min-h-screen bg-black text-slate-300 font-sans">
         
       {/* --- SECTION 1: HÉROS --- */}
-      {/* Les sections n'ont pas de couleur de fond, elles sont transparentes et montrent le bg-black du parent. */}
       <section className="relative flex flex-col items-center justify-center min-h-screen text-center px-6 pt-24 pb-16">
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-slate-100 tracking-tighter mb-6">
           Je transforme vos idées en
