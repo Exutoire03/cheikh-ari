@@ -11,7 +11,7 @@ const projects = [
   { id: 3, title: 'Application de newsletter', description: 'Système de collecte d\'e-mails simple et efficace pour une newsletter.', image: '/projects/a-news.PNG', tags: ['React', 'Node.js'], link: 'https://newsletter-ari.vercel.app/' },
   { id: 4, title: 'Plateforme étudiants-entreprises', description: 'Plateforme innovante de mise en relation entre étudiants et entreprises.', image: '/projects/a-eig.PNG', tags: ['Next.js', 'Tailwind CSS', 'Supabase'], link: 'https://eig-soutenance.vercel.app/' },
   { id: 5, title: 'Générateur de mot de passe', description: 'Application de génération de mots de passe aléatoires et sécurisés.', image: '/projects/mdpp.PNG', tags: ['Next.js', 'Tailwind CSS'], link: 'https://random-password-silk.vercel.app/' },
-  { id: 6, title: 'Générateur de citations', description: 'Générateur de citations inspirantes pour trouver la motivation quotidienne.', image: '/projects/a-quotes.PNG', tags: ['Next.js', 'Tailwind CSS'], link: 'http://quote-spark-ignite-now.lovable.app/' }
+  { id: 6, title: 'Landing page application de nutrition', description: 'Landing page pour l\'application de nutrition Adun.', image: '/projects/adun.PNG', tags: ['Next.js', 'Tailwind CSS'], link: 'https://adun-lp.vercel.app/' }
 ];
 
 
