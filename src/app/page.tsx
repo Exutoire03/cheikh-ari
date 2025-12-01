@@ -3,33 +3,11 @@ import Link from 'next/link';
 import { FiArrowRight } from 'react-icons/fi';
 import { SiNextdotjs, SiTypescript, SiTailwindcss } from 'react-icons/si';
 import { FaReact, FaNodeJs } from 'react-icons/fa';
+import { projects } from '@/data/projects';
 
-const featuredProjects = [
-  {
-    id: 1,
-    title: 'Générateur de bio avec IA',
-    description: 'Une application web de génération de bio inspirantes en temps réel grâce à une IA.',
-    image: '/projects/biospark.PNG',
-    tags: ['Next.js', 'Gemini', 'Tailwind CSS'],
-    link: 'https://quotes-eight-red.vercel.app/',
-  },
-  {
-    id: 2,
-    title: 'Site vitrine du restaurant Corazon',
-    description: 'Site vitrine moderne et responsive pour le restaurant Corazon, mettant en avant son ambiance unique.',
-    image: '/projects/corazon.PNG',
-    tags: ['Next.js', 'Tailwind CSS'],
-    link: 'https://corazon-flax.vercel.app/',
-  },
-  {
-    id: 3,
-    title: 'Plateforme étudiants-entreprises',
-    description: 'Plateforme innovante de mise en relation entre étudiants et entreprises pour des stages et des projets.',
-    image: '/projects/a-eig.PNG',
-    tags: ['Next.js', 'Tailwind CSS', 'Supabase'],
-    link: 'https://eig-soutenance.vercel.app/', 
-  },
-];
+const featuredProjects = projects.filter((project) =>
+  [1, 3, 7, 8].includes(project.id)
+);
 
 const skills = [
   { name: 'React', icon: <FaReact size={40} /> },

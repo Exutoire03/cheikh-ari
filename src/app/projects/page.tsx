@@ -3,17 +3,7 @@
 import Image from 'next/image';
 import { useState } from 'react';
 import { FiArrowUpRight } from 'react-icons/fi';
-
-
-const projects = [
-  { id: 1, title: 'Générateur de bio avec IA', description: 'Une application web de génération de bio inspirantes en temps réel grâce à une IA.', image: '/projects/biospark.PNG', tags: ['Next.js', 'Tailwind CSS', 'IA'], link: 'https://quotes-eight-red.vercel.app/' },
-  { id: 2, title: 'Site vitrine du restaurant Corazon', description: 'Site vitrine moderne et responsive pour le restaurant Corazon, mettant en avant son ambiance unique.', image: '/projects/corazon.PNG', tags: ['Next.js', 'Tailwind CSS'], link: 'https://corazon-flax.vercel.app/' },
-  { id: 3, title: 'Application de newsletter', description: 'Système de collecte d\'e-mails simple et efficace pour une newsletter.', image: '/projects/a-news.PNG', tags: ['React', 'Node.js'], link: 'https://newsletter-ari.vercel.app/' },
-  { id: 4, title: 'Plateforme étudiants-entreprises', description: 'Plateforme innovante de mise en relation entre étudiants et entreprises.', image: '/projects/a-eig.PNG', tags: ['Next.js', 'Tailwind CSS', 'Supabase'], link: 'https://eig-soutenance.vercel.app/' },
-  { id: 5, title: 'Générateur de mot de passe', description: 'Application de génération de mots de passe aléatoires et sécurisés.', image: '/projects/mdpp.PNG', tags: ['Next.js', 'Tailwind CSS'], link: 'https://random-password-silk.vercel.app/' },
-  { id: 6, title: 'Landing page application de nutrition', description: 'Landing page pour l\'application de nutrition Adun.', image: '/projects/adun.PNG', tags: ['Next.js', 'Tailwind CSS'], link: 'https://adun-lp.vercel.app/' }
-];
-
+import { projects } from '@/data/projects';
 
 const filterCategories = ['Tous', 'Next.js', 'React', 'Supabase', 'IA'];
 
