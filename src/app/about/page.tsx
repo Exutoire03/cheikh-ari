@@ -32,6 +32,8 @@ const softSkills = [
     { skill: 'Travail d\'équipe', icon: <FiUsers />, description: 'Collaboration efficace et partage des connaissances' },
     { skill: 'Adaptabilité', icon: <FiGitMerge />, description: 'Capacité à m\'adapter rapidement aux nouvelles technologies' },
     { skill: 'Résolution de problèmes', icon: <FiCpu />, description: 'Approche analytique et créative des défis techniques' },
+    { skill: 'Leadership', icon: <FiStar />, description: 'Capacité à prendre des initiatives, à guider une équipe et à maintenir une vision claire du projet' },
+    { skill: 'Autonomie', icon: <FiActivity />, description: 'Habitué à travailler de manière autonome, à organiser mon travail et à prendre des décisions pertinentes' },
   ];
   
 const hobbies = [
@@ -45,7 +47,7 @@ const hobbies = [
 const skills = [
     { category: 'Frontend', technologies: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS'], icon: <FiCode /> },
     { category: 'Backend', technologies: ['Node.js','PostgreSQL'], icon: <FiCpu /> },
-    { category: 'Outils', technologies: ['Git', 'Docker', 'Vercel'], icon: <FiDribbble /> },
+    { category: 'Outils', technologies: ['Git', 'Docker', 'Vercel', 'Cursor', 'Windsurf'], icon: <FiDribbble /> },
   ];
 
 
