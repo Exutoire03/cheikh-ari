@@ -43,7 +43,7 @@ const Navbar = () => {
     // L'état `isScrolled` a été retiré de la logique de style.
     <nav 
       className={`fixed top-0 w-full z-50 transition-transform duration-300 ease-in-out
-        bg-gray-950/80 backdrop-blur-lg border-b border-gray-800
+        bg-white/80 dark:bg-gray-950/80 backdrop-blur-lg border-b border-gray-200 dark:border-gray-800
         ${isVisible ? 'translate-y-0' : '-translate-y-full'}`
       }
     >
@@ -62,13 +62,12 @@ const Navbar = () => {
 
           {/* Menu Desktop */}
           <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8">
+            <div className="ml-10 flex items-center space-x-8">
               {navigation.map((item) => (
                 <Link 
                   key={item.name}
                   href={item.href} 
-                  // Les couleurs des liens sont déjà parfaites pour un fond sombre
-                  className="text-slate-300 hover:text-sky-400 px-3 py-2 text-sm lg:text-base font-medium transition-colors"
+                  className="text-slate-700 dark:text-slate-300 hover:text-sky-500 dark:hover:text-sky-400 px-3 py-2 text-sm lg:text-base font-medium transition-colors"
                 >
                   {item.name}
                 </Link>
@@ -80,7 +79,7 @@ const Navbar = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-slate-300 hover:text-sky-400 focus:outline-none"
+              className="inline-flex items-center justify-center p-2 rounded-md text-slate-700 dark:text-slate-300 hover:text-sky-500 dark:hover:text-sky-400 focus:outline-none"
               aria-expanded={isMenuOpen}
             >
               <span className="sr-only">Ouvrir le menu principal</span>
@@ -100,7 +99,7 @@ const Navbar = () => {
 
       {/* Menu Mobile */}
       <div
-        className={`md:hidden absolute top-full left-0 w-full bg-gray-950/95 backdrop-blur-lg shadow-lg
+        className={`md:hidden absolute top-full left-0 w-full bg-white/95 dark:bg-gray-950/95 backdrop-blur-lg shadow-lg
                    transition-all duration-300 ease-in-out ${isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}
         style={{ overflow: 'hidden' }}
       >
@@ -109,7 +108,7 @@ const Navbar = () => {
             <Link
               key={item.name}
               href={item.href}
-              className="block px-3 py-4 text-base font-medium text-slate-300 hover:text-white hover:bg-gray-800/50 rounded-md transition-colors"
+              className="block px-3 py-4 text-base font-medium text-slate-700 dark:text-slate-300 hover:text-sky-500 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800/50 rounded-md transition-colors"
               onClick={closeMenu}
             >
               {item.name}

@@ -11,10 +11,10 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <div className="min-h-screen bg-black text-slate-300 font-sans pt-28 pb-24 overflow-x-hidden">
+    <div className="min-h-screen bg-white dark:bg-black text-slate-800 dark:text-slate-300 font-sans pt-28 pb-24 overflow-x-hidden transition-colors duration-300">
      
       <div 
-        className="absolute top-0 left-0 -z-10 h-full w-full bg-black"
+        className="absolute top-0 left-0 -z-10 h-full w-full bg-white dark:bg-black"
         style={{backgroundImage: 'radial-gradient(ellipse 80% 80% at 50% -20%, rgba(14, 165, 233, 0.15), rgba(255, 255, 255, 0))'}}
       />
 
@@ -25,7 +25,7 @@ export default function ContactPage() {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-sky-400 to-purple-500 tracking-tighter">
             Entrons en contact
           </h1>
-          <p className="text-lg md:text-xl text-slate-400 leading-relaxed max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-slate-600 dark:text-slate-400 leading-relaxed max-w-2xl mx-auto">
             Une idée ? Un projet ? Une question ? Je suis à votre écoute. Remplissez le formulaire ou utilisez mes coordonnées pour me joindre.
           </p>
         </div>
