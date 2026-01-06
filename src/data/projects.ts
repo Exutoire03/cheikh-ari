@@ -71,6 +71,15 @@ export const projects = [
     tags: ['Next.js', 'Tailwind CSS', 'Supabase'],
     link: 'https://optimick.vercel.app/',
   },
+  {
+    id: 9,
+    title: "Plateforme de missions commerciales au Bénin",
+    description:
+      "PaceSell connecte les commerciaux et hôtesses aux entreprises au Bénin. Gérez vos missions, sécurisez vos paiements et développez votre réseau professionnel.",
+    image: '/projects/paceee.PNG',
+    tags: ['Next.js', 'Tailwind CSS', 'Supabase'],
+    link: 'https://www.pacesell.com/',
+  },
 ];
 
 

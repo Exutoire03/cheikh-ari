@@ -5,9 +5,16 @@ import { SiNextdotjs, SiTypescript, SiTailwindcss } from 'react-icons/si';
 import { FaReact, FaNodeJs } from 'react-icons/fa';
 import { projects } from '@/data/projects';
 
-const featuredProjects = projects.filter((project) =>
-  [1, 3, 7, 8].includes(project.id)
-);
+const featuredProjects = projects
+  .filter((project) => [9, 1, 3, 7, 8].includes(project.id))
+  .sort((a, b) => {
+    // Mettre le projet 9 en première position
+    if (a.id === 9) return -1;
+    if (b.id === 9) return 1;
+    // Garder l'ordre original pour les autres (1, 3, 7, 8)
+    const order = [9, 1, 3, 7, 8];
+    return order.indexOf(a.id) - order.indexOf(b.id);
+  });
 
 const skills = [
   { name: 'React', icon: <FaReact size={40} /> },
@@ -21,18 +28,18 @@ const skills = [
 export default function HomePage() {
   return (
 
-    <div className="min-h-screen bg-black text-slate-300 font-sans">
+    <div className="min-h-screen bg-white dark:bg-black text-slate-800 dark:text-slate-300 font-sans transition-colors duration-300">
         
       {/* --- SECTION 1: HÉROS --- */}
       <section className="relative flex flex-col items-center justify-center min-h-screen text-center px-6 pt-24 pb-16">
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-slate-100 tracking-tighter mb-6">
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-slate-900 dark:text-slate-100 tracking-tighter mb-6">
           Je transforme vos idées en
           <br />
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-sky-400 to-purple-500">
             applications web modernes.
           </span>
         </h1>
-        <p className="max-w-2xl mx-auto text-lg md:text-xl text-slate-400 leading-relaxed mb-10">
+        <p className="max-w-2xl mx-auto text-lg md:text-xl text-slate-600 dark:text-slate-400 leading-relaxed mb-10">
           Développeur Front-end spécialisé en React, Next.js et Tailwindcss, je conçois des expériences utilisateur fluides et des architectures solides pour donner vie à vos projets.
         </p>
         <div className="flex flex-col sm:flex-row gap-4">
@@ -47,8 +54,8 @@ export default function HomePage() {
           <a 
             href="mailto:cheikhdev.web@gmail.com" 
             className="inline-flex items-center justify-center gap-2 px-8 py-3 rounded-full
-              text-slate-100 font-semibold ring-2 ring-gray-700
-              hover:bg-gray-800 transition-all duration-300"
+              text-slate-700 dark:text-slate-100 font-semibold ring-2 ring-gray-300 dark:ring-gray-700
+              hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-300"
           >
             Me contacter
           </a>
@@ -70,19 +77,19 @@ export default function HomePage() {
           <div className="space-y-20">
             {featuredProjects.map((project, index) => (
               <div key={project.id} className={`group grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center`}>
-                <div className={`relative w-full h-80 rounded-2xl overflow-hidden border border-gray-800 shadow-xl ${index % 2 !== 0 ? 'lg:order-last' : ''}`}>
+                <div className={`relative w-full h-80 rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-800 shadow-xl ${index % 2 !== 0 ? 'lg:order-last' : ''}`}>
                   <Image src={project.image} alt={project.title} fill className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-105" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
                 </div>
                 <div className="flex flex-col items-start">
-                  <h3 className="text-2xl font-bold text-slate-100 mb-3">{project.title}</h3>
-                  <p className="text-slate-400 mb-5 leading-relaxed">{project.description}</p>
+                  <h3 className="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-3">{project.title}</h3>
+                  <p className="text-slate-600 dark:text-slate-400 mb-5 leading-relaxed">{project.description}</p>
                   <div className="flex flex-wrap gap-2 mb-6">
                     {project.tags.map(tag => (
-                      <span key={tag} className="px-3 py-1 bg-gray-900 text-sky-300 border border-gray-700 rounded-full text-xs font-semibold">{tag}</span>
+                      <span key={tag} className="px-3 py-1 bg-gray-100 dark:bg-gray-900 text-sky-600 dark:text-sky-300 border border-gray-300 dark:border-gray-700 rounded-full text-xs font-semibold">{tag}</span>
                     ))}
                   </div>
-                  <a href={project.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sky-400 font-semibold hover:text-sky-300 transition-colors duration-300">
+                  <a href={project.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sky-500 dark:text-sky-400 font-semibold hover:text-sky-600 dark:hover:text-sky-300 transition-colors duration-300">
                     Voir le projet <FiArrowRight className="transition-transform group-hover:translate-x-1" />
                   </a>
                 </div>
@@ -106,21 +113,21 @@ export default function HomePage() {
       <section className="py-24 sm:py-32 px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-100 tracking-tighter">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-slate-100 tracking-tighter">
               Mes Compétences Clés
             </h2>
-            <p className="mt-4 text-lg text-slate-400">
+            <p className="mt-4 text-lg text-slate-600 dark:text-slate-400">
               Les technologies que j&apos;utilise pour donner vie à vos projets.
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-4xl mx-auto">
             {skills.map((skill) => (
-              <div key={skill.name} className="group p-6 rounded-2xl bg-gray-950 border border-gray-800 text-center
+              <div key={skill.name} className="group p-6 rounded-2xl bg-gray-50 dark:bg-gray-950 border border-gray-200 dark:border-gray-800 text-center
                                              hover:border-sky-500/50 hover:-translate-y-1 transition-all duration-300">
-                <div className="text-sky-400 transition-colors duration-300 mb-3 group-hover:text-sky-300">
+                <div className="text-sky-500 dark:text-sky-400 transition-colors duration-300 mb-3 group-hover:text-sky-600 dark:group-hover:text-sky-300">
                   {skill.icon}
                 </div>
-                <p className="text-md font-semibold text-slate-200 tracking-wider">
+                <p className="text-md font-semibold text-slate-700 dark:text-slate-200 tracking-wider">
                   {skill.name}
                 </p>
               </div>
@@ -132,10 +139,10 @@ export default function HomePage() {
       {/* --- SECTION 4: APPEL À L'ACTION FINAL --- */}
       <section className="py-24 sm:py-32 px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-100 tracking-tighter">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-slate-100 tracking-tighter">
                 Prêt à concrétiser votre projet ?
             </h2>
-            <p className="mt-4 mb-8 text-lg text-slate-400">
+            <p className="mt-4 mb-8 text-lg text-slate-600 dark:text-slate-400">
                 Je suis toujours ouvert à de nouvelles opportunités. N&apos;hésitez pas à me contacter pour que nous puissions discuter de votre idée.
             </p>
             <Link

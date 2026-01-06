@@ -51,44 +51,44 @@ export default function ContactForm() {
       
       
       <div className={`lg:col-span-7 transition-all duration-1000 delay-200 transform ${isVisible ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'}`}>
-        <div className="p-8 bg-gray-950/50 border border-gray-800 rounded-2xl backdrop-blur-sm">
+        <div className="p-8 bg-gray-50/50 dark:bg-gray-950/50 border border-gray-200 dark:border-gray-800 rounded-2xl backdrop-blur-sm">
           <form onSubmit={handleSubmit} className="space-y-6">
             
             <div className="relative group">
-              <label htmlFor="name" className="block text-sm font-medium text-slate-400 mb-2 transition-colors group-focus-within:text-sky-400">
+              <label htmlFor="name" className="block text-sm font-medium text-slate-600 dark:text-slate-400 mb-2 transition-colors group-focus-within:text-sky-500 dark:group-focus-within:text-sky-400">
                 Nom complet
               </label>
               <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} required
-                className="w-full px-4 py-3 rounded-lg bg-gray-900 border border-gray-700 text-slate-100 placeholder-gray-500
+                className="w-full px-4 py-3 rounded-lg bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 text-slate-900 dark:text-slate-100 placeholder-gray-400 dark:placeholder-gray-500
                            focus:outline-none focus:border-sky-500 focus:ring-2 focus:ring-sky-500/30 transition-all duration-300"
                 placeholder="Ex: Jean Dupont"
               />
             </div>
 
             <div className="relative group">
-              <label htmlFor="email" className="block text-sm font-medium text-slate-400 mb-2 transition-colors group-focus-within:text-sky-400">
+              <label htmlFor="email" className="block text-sm font-medium text-slate-600 dark:text-slate-400 mb-2 transition-colors group-focus-within:text-sky-500 dark:group-focus-within:text-sky-400">
                 Email
               </label>
               <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} required
-                className="w-full px-4 py-3 rounded-lg bg-gray-900 border border-gray-700 text-slate-100 placeholder-gray-500
+                className="w-full px-4 py-3 rounded-lg bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 text-slate-900 dark:text-slate-100 placeholder-gray-400 dark:placeholder-gray-500
                            focus:outline-none focus:border-sky-500 focus:ring-2 focus:ring-sky-500/30 transition-all duration-300"
                 placeholder="votre.email@exemple.com"
               />
             </div>
 
             <div className="relative group">
-              <label htmlFor="subject" className="block text-sm font-medium text-slate-400 mb-2 transition-colors group-focus-within:text-sky-400">
+              <label htmlFor="subject" className="block text-sm font-medium text-slate-600 dark:text-slate-400 mb-2 transition-colors group-focus-within:text-sky-500 dark:group-focus-within:text-sky-400">
                 Sujet
               </label>
               <input type="text" id="subject" name="subject" value={formData.subject} onChange={handleChange} required
-                className="w-full px-4 py-3 rounded-lg bg-gray-900 border border-gray-700 text-slate-100 placeholder-gray-500
+                className="w-full px-4 py-3 rounded-lg bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 text-slate-900 dark:text-slate-100 placeholder-gray-400 dark:placeholder-gray-500
                            focus:outline-none focus:border-sky-500 focus:ring-2 focus:ring-sky-500/30 transition-all duration-300"
                 placeholder="Opportunité de collaboration"
               />
             </div>
 
             <div className="relative group">
-              <label htmlFor="message" className="block text-sm font-medium text-slate-400 mb-2 transition-colors group-focus-within:text-sky-400">
+              <label htmlFor="message" className="block text-sm font-medium text-slate-600 dark:text-slate-400 mb-2 transition-colors group-focus-within:text-sky-500 dark:group-focus-within:text-sky-400">
                 Votre message
               </label>
               <textarea id="message" name="message" value={formData.message} onChange={handleChange} required rows={5}
@@ -114,14 +114,14 @@ export default function ContactForm() {
       <div className={`lg:col-span-5 lg:sticky lg:top-28 space-y-12 transition-all duration-1000 delay-300 transform ${isVisible ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'}`}>
         
         <div>
-          <h2 className="text-2xl font-bold text-slate-100 mb-6">Autres moyens de contact</h2>
+          <h2 className="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-6">Autres moyens de contact</h2>
           <div className="space-y-4">
             {contactInfo.map((info, index) => (
-              <div key={index} className="flex items-start gap-4 p-4 rounded-xl bg-gray-950/50 border border-gray-800 hover:border-sky-500/50 transition-colors duration-300">
-                <span className="p-2 bg-gray-800 rounded-lg text-sky-400 mt-1">{info.icon}</span>
+              <div key={index} className="flex items-start gap-4 p-4 rounded-xl bg-gray-50/50 dark:bg-gray-950/50 border border-gray-200 dark:border-gray-800 hover:border-sky-500/50 transition-colors duration-300">
+                <span className="p-2 bg-gray-200 dark:bg-gray-800 rounded-lg text-sky-500 dark:text-sky-400 mt-1">{info.icon}</span>
                 <div>
-                  <h3 className="font-semibold text-slate-200">{info.title}</h3>
-                  <p className="text-slate-400">{info.value}</p>
+                  <h3 className="font-semibold text-slate-800 dark:text-slate-200">{info.title}</h3>
+                  <p className="text-slate-600 dark:text-slate-400">{info.value}</p>
                 </div>
               </div>
             ))}
@@ -129,12 +129,12 @@ export default function ContactForm() {
         </div>
 
         <div>
-          <h2 className="text-2xl font-bold text-slate-100 mb-6">Retrouvez-moi en ligne</h2>
+          <h2 className="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-6">Retrouvez-moi en ligne</h2>
           <div className="flex flex-wrap gap-4">
             {socialLinks.map((social, index) => (
               <a key={index} href={social.url} target="_blank" rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-gray-900 hover:bg-gray-800
-                           text-slate-300 hover:text-white transition-all duration-300 border border-gray-700 hover:border-gray-600"
+                className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-gray-100 dark:bg-gray-900 hover:bg-gray-200 dark:hover:bg-gray-800
+                           text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-all duration-300 border border-gray-300 dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-600"
               >
                 {social.icon}
                 {social.name}
