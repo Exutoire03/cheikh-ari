@@ -6,13 +6,13 @@ import { FaReact, FaNodeJs } from 'react-icons/fa';
 import { projects } from '@/data/projects';
 
 const featuredProjects = projects
-  .filter((project) => [9, 1, 3, 7, 8].includes(project.id))
+  .filter((project) => [9, 1, 3, 7].includes(project.id))
   .sort((a, b) => {
     // Mettre le projet 9 en première position
     if (a.id === 9) return -1;
     if (b.id === 9) return 1;
     // Garder l'ordre original pour les autres (1, 3, 7, 8)
-    const order = [9, 1, 3, 7, 8];
+    const order = [9, 1, 3, 7];
     return order.indexOf(a.id) - order.indexOf(b.id);
   });
 
