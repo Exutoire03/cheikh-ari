@@ -62,16 +62,16 @@ export const projects = [
     tags: ['Next.js', 'Tailwind CSS'],
     link: 'https://adun-lp.vercel.app/',
   },
-  // Projet mis en pause / désactivé (id: 8)
-  // {
-  //   id: 8,
-  //   title: "Site web d'une appilcation de gestion et de suivi de stock entre entrepot et boutique",
-  //   description:
-  //     "Un site professionnel pour une application de gestion et de suivi de stock entre entrepôt et boutique, conçu pour rassurer les entreprises, présenter les fonctionnalités clés et montrer comment optimiser leur logistique au quotidien.",
-  //   image: '/projects/optimickk.PNG',
-  //   tags: ['Next.js', 'Tailwind CSS', 'Supabase'],
-  //   link: 'https://optimick.vercel.app/',
-  // },
+
+  {
+    id: 8,
+    title: "Site web d'une appilcation de gestion et de suivi de stock entre entrepot et boutique",
+    description:
+      "Un site professionnel pour une application de gestion et de suivi de stock entre entrepôt et boutique, conçu pour rassurer les entreprises, présenter les fonctionnalités clés et montrer comment optimiser leur logistique au quotidien.",
+    image: '/projects/optimickk.PNG',
+    tags: ['Next.js', 'Tailwind CSS', 'Supabase'],
+    link: 'https://optimick.vercel.app/',
+  },
   {
     id: 9,
     title: "Plateforme de missions commerciales au Bénin",
@@ -80,6 +80,15 @@ export const projects = [
     image: '/projects/paceee.PNG',
     tags: ['Next.js', 'Tailwind CSS', 'Supabase'],
     link: 'https://www.pacesell.com/',
+  },
+  {
+    id: 10,
+    title: "Site web d'un jeu vidéo",
+    description:
+      "Un site web pour un jeu vidéo qui traite de la culture, de l'histoire du Bénin, des Amazones, des récits et des légendes du Bénin.",
+    image: '/projects/epopee.PNG',
+    tags: ['Next.js', 'Tailwind CSS', 'Supabase'],
+    link: 'https://danxogames.vercel.app/',
   },
 ];
 
