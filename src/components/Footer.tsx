@@ -91,9 +91,6 @@ const Footer = () => {
           <p className="text-slate-500 dark:text-slate-500 text-sm">
             © {new Date().getFullYear()} Cheikh Ari. Tous droits réservés.
           </p>
-          <p className="text-slate-500 text-sm mt-4 sm:mt-0">
-            Conçu avec ❤️ et du code.
-          </p>
         </div>
       </div>
     </footer>

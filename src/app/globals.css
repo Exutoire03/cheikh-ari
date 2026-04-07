@@ -1,4 +1,7 @@
 @import "tailwindcss";
+/* Charge tailwind.config.ts (darkMode: class, chemins content) — requis avec Tailwind v4 + PostCSS */
+@config "../../tailwind.config.ts";
+@source "../**/*.{js,ts,jsx,tsx,mdx}";
 
 :root {
   --background: #ffffff;
@@ -21,7 +24,7 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  /* La police vient du layout (next/font Inter) — ne pas forcer Arial ici */
 }
 
 /* Contenu HTML des articles (TipTap → generateHTML) */
@@ -45,6 +48,13 @@ body {
   margin-top: 1.5rem;
   margin-bottom: 0.5rem;
   line-height: 1.35;
+}
+.blog-article-content h4 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-top: 1.25rem;
+  margin-bottom: 0.4rem;
+  line-height: 1.4;
 }
 .blog-article-content p {
   margin-bottom: 1rem;
@@ -102,6 +112,24 @@ body {
 .dark .blog-article-content code {
   background: rgb(30 41 59);
 }
+.blog-article-content pre {
+  margin: 1.25rem 0;
+  padding: 1rem 1.25rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  font-family: ui-monospace, monospace;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  background: rgb(241 245 249);
+}
+.dark .blog-article-content pre {
+  background: rgb(30 41 59);
+}
+.blog-article-content pre code {
+  padding: 0;
+  background: transparent;
+  font-size: inherit;
+}
 
 /* Zone d’édition TipTap */
 .tiptap-editor .ProseMirror {
@@ -116,4 +144,40 @@ body {
   float: left;
   height: 0;
   pointer-events: none;
+}
+.tiptap-editor .ProseMirror h1 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+.tiptap-editor .ProseMirror h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 1rem;
+  margin-bottom: 0.4rem;
+}
+.tiptap-editor .ProseMirror h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-top: 0.85rem;
+  margin-bottom: 0.35rem;
+}
+.tiptap-editor .ProseMirror h4 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-top: 0.75rem;
+  margin-bottom: 0.3rem;
+}
+.tiptap-editor .ProseMirror pre {
+  margin: 0.75rem 0;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  font-family: ui-monospace, monospace;
+  font-size: 0.875rem;
+  background: rgb(241 245 249);
+}
+.dark .tiptap-editor .ProseMirror pre {
+  background: rgb(30 41 59);
 }

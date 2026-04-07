@@ -1,10 +1,10 @@
 import StarterKit from '@tiptap/starter-kit';
 import Image from '@tiptap/extension-image';
 
-/** Extensions partagées entre l’éditeur et le rendu HTML (generateHTML). StarterKit inclut déjà Link. */
+/** Extensions partagées entre l’éditeur et le rendu HTML (generateHTML). StarterKit inclut Link et Underline. */
 export const blogExtensions = [
   StarterKit.configure({
-    heading: { levels: [1, 2, 3] },
+    heading: { levels: [1, 2, 3, 4] },
     link: {
       openOnClick: true,
       HTMLAttributes: {
