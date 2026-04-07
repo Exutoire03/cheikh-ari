@@ -1,4 +1,7 @@
 @import "tailwindcss";
+/* Charge tailwind.config.ts (darkMode: class, chemins content) — requis avec Tailwind v4 + PostCSS */
+@config "../../tailwind.config.ts";
+@source "../**/*.{js,ts,jsx,tsx,mdx}";
 
 :root {
   --background: #ffffff;
@@ -21,5 +24,160 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  /* La police vient du layout (next/font Inter) — ne pas forcer Arial ici */
+}
+
+/* Contenu HTML des articles (TipTap → generateHTML) */
+.blog-article-content h1 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.25;
+}
+.blog-article-content h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 1.75rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+.blog-article-content h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.35;
+}
+.blog-article-content h4 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-top: 1.25rem;
+  margin-bottom: 0.4rem;
+  line-height: 1.4;
+}
+.blog-article-content p {
+  margin-bottom: 1rem;
+  line-height: 1.75;
+}
+.blog-article-content ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+.blog-article-content ol {
+  list-style: decimal;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+.blog-article-content li {
+  margin-bottom: 0.35rem;
+}
+.blog-article-content blockquote {
+  border-left: 4px solid rgb(14 165 233);
+  padding-left: 1rem;
+  margin: 1.25rem 0;
+  font-style: italic;
+  color: rgb(71 85 105);
+}
+.dark .blog-article-content blockquote {
+  color: rgb(148 163 184);
+}
+.blog-article-content hr {
+  margin: 2rem 0;
+  border: 0;
+  border-top: 1px solid rgb(226 232 240);
+}
+.dark .blog-article-content hr {
+  border-top-color: rgb(51 65 85);
+}
+.blog-article-content a {
+  color: rgb(2 132 199);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.dark .blog-article-content a {
+  color: rgb(56 189 248);
+}
+.blog-article-content strong {
+  font-weight: 700;
+}
+.blog-article-content code {
+  font-family: ui-monospace, monospace;
+  font-size: 0.9em;
+  padding: 0.15em 0.35em;
+  border-radius: 0.25rem;
+  background: rgb(241 245 249);
+}
+.dark .blog-article-content code {
+  background: rgb(30 41 59);
+}
+.blog-article-content pre {
+  margin: 1.25rem 0;
+  padding: 1rem 1.25rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  font-family: ui-monospace, monospace;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  background: rgb(241 245 249);
+}
+.dark .blog-article-content pre {
+  background: rgb(30 41 59);
+}
+.blog-article-content pre code {
+  padding: 0;
+  background: transparent;
+  font-size: inherit;
+}
+
+/* Zone d’édition TipTap */
+.tiptap-editor .ProseMirror {
+  min-height: 22rem;
+  outline: none;
+  padding: 1rem 1.25rem;
+  line-height: 1.7;
+}
+.tiptap-editor .ProseMirror p.is-editor-empty:first-child::before {
+  color: rgb(148 163 184);
+  content: attr(data-placeholder);
+  float: left;
+  height: 0;
+  pointer-events: none;
+}
+.tiptap-editor .ProseMirror h1 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+.tiptap-editor .ProseMirror h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 1rem;
+  margin-bottom: 0.4rem;
+}
+.tiptap-editor .ProseMirror h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-top: 0.85rem;
+  margin-bottom: 0.35rem;
+}
+.tiptap-editor .ProseMirror h4 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-top: 0.75rem;
+  margin-bottom: 0.3rem;
+}
+.tiptap-editor .ProseMirror pre {
+  margin: 0.75rem 0;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  font-family: ui-monospace, monospace;
+  font-size: 0.875rem;
+  background: rgb(241 245 249);
+}
+.dark .tiptap-editor .ProseMirror pre {
+  background: rgb(30 41 59);
 }

@@ -9,6 +9,7 @@ const Footer = () => {
     { name: 'Accueil', href: '/' },
     { name: 'À propos', href: '/about' },
     { name: 'Projets', href: '/projects' },
+    { name: 'Blog', href: '/blog' },
     { name: 'Contact', href: '/contact' },
   ];
 
@@ -89,9 +90,6 @@ const Footer = () => {
         <div className="mt-16 pt-8 border-t border-gray-200 dark:border-gray-800/50 flex flex-col sm:flex-row justify-between items-center text-center sm:text-left">
           <p className="text-slate-500 dark:text-slate-500 text-sm">
             © {new Date().getFullYear()} Cheikh Ari. Tous droits réservés.
-          </p>
-          <p className="text-slate-500 text-sm mt-4 sm:mt-0">
-            Conçu avec ❤️ et du code.
           </p>
         </div>
       </div>
