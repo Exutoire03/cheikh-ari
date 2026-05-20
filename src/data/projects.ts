@@ -90,6 +90,24 @@ export const projects = [
     tags: ['Next.js', 'Tailwind CSS', 'Supabase'],
     link: 'https://danxogames.com/',
   },
+  {
+    id: 11,
+    title: 'Site web Monwaa',
+    description:
+      "Site de l'application Monwaa. Une app qui permet de faire la collecte de présence en ligne",
+    image: '/projects/monwaa.PNG',
+    tags: ['Next.js', 'Tailwind CSS', 'Supabase'],
+    link: 'https://monwaa.com/',
+  },
+  {
+    id: 12,
+    title: 'Site web Palladium Africa',
+    description:
+      "Site institutionnel pour Palladium Africa : une holding panafricaine",
+    image: '/projects/palladiumafrica.PNG',
+    tags: ['Next.js', 'Tailwind CSS', 'Supabase'],
+    link: 'https://palladiumafrica.com/',
+  },
 ];
 
 
